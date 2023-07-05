@@ -1,0 +1,80 @@
+
+body{
+    padding: 10px;
+    height: 100vh;
+    background: rgb(97,66,218);
+    background: linear-gradient(0deg, rgba(97,66,218,1) 0%, rgba(255,255,255,1) 100%);
+  }
+  .container .title{
+    
+    font-size: 25px;
+    font-weight: 500;
+    position: relative;
+  }
+ 
+
+  .login-container{
+    
+    max-width: 200px;
+    width: 100%;
+    background-color: #fff;
+    padding: 25px 30px;
+    border-radius: 10px;
+    box-shadow: 0 5px 10px rgba(0,0,0,0.15);
+  }
+  .content form .user-details{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: 20px 0 12px 0;
+  }
+  form .user-details .input-box{
+    margin-bottom: 15px;
+  }
+  form .input-box span.details{
+    display: block;
+    font-weight: 500;
+    margin-bottom: 5px;
+  }
+  .user-details .input-box input{
+    height: 25px;
+    width: 85%;
+    outline: none;
+    font-size: 16px;
+    border-radius: 2px;
+    padding-left: 15px;
+    border: 1px solid #ccc;
+    border-bottom-width: 2px;
+    transition: all 0.3s ease;
+  }
+  .user-details .input-box input:focus,
+.user-details .input-box input:valid{
+  border-color: rgb(97,66,218);
+}
+form input[type="radio"]{
+    display: none;
+  }
+  
+   @media(max-width: 584px){
+   .container{
+    max-width: 100%;
+  }
+  form .user-details .input-box{
+      margin-bottom: 15px;
+      width: 100%;
+    }
+    form .category{
+      width: 100%;
+    }
+    .content form .user-details{
+      max-height: 300px;
+      overflow-y: scroll;
+    }
+    .user-details::-webkit-scrollbar{
+      width: 5px;
+    }
+    }
+    @media only screen and (max-width: 459px){
+    .container .content .category{
+      flex-direction: column;
+    }}
