@@ -1,21 +1,31 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="index.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="index.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital@1&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com%22%3E/
+    <link rel=" preconnect" href="https://fonts.gstatic.com/" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Just+Me+Again+Down+Here&display=swap"
+      rel="stylesheet"
+    />
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital@1&display=swap" rel="stylesheet">
-    <link rel="preconnect" href="https://fonts.googleapis.com%22%3E/
-    <link rel=" preconnect" href="https://fonts.gstatic.com/" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Just+Me+Again+Down+Here&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Inter:wght@400;600&display=swap" rel="stylesheet">
     <title>Carrinho</title>
-</head>
+  </head>
 
-<body>
+  <body>
     <header>
+
+      <div class="top-nav">
         <div class="logo">
             <img src="/imagens/Logo.png" alt="imagem da logo">
             <p>ANUBIS</p>
@@ -23,15 +33,39 @@
         <div class="busca">
             <input type="text" placeholder="pesquise seu produto"> <button><img src="/imagens/lupa.png" alt="botão de confirmar busca"></button>
         </div>
-        <nav>
-            <ul>
-                <li><a href="#"><img src="/imagens/Conta.png" alt="icone para conta" ></a></li>
-                <li><a href="#"><img src="/imagens/mercadinho.png" alt="icone para o carrinho de compras"></a></li>
-                <li><a href="#"><img src="/imagens/Suporte.png" alt="icone do suporte" ></a></li>
-            </ul>
-        </nav>
+        <input id="menu-toggle" type="checkbox" />
+        <label class="menu-button-container" for="menu-toggle">
+          <div class="menu-button"></div>
+        </label>
+        <ul class="menu">
+            <li><a href="#"><img src="/imagens/Conta.png" alt="icone para conta" ></a></li>
+            <li><a href="#"><img src="/imagens/mercadinho.png" alt="icone para o carrinho de compras"></a></li>
+            <li><a href="#"><img src="/imagens/Suporte.png" alt="icone do suporte" ></a></li>
+        </ul>  
+      </div>
     </header>
-</body>
-<script src="index.js"></script>
 
+
+
+
+
+
+    <footer>
+      <div class="logo">
+        <img src="/imagens/Logo.png" alt="imagem da logo">
+        <p>ANUBIS</p>
+      </div>
+      
+      <nav>
+        <p>Siga-nos</p>
+        <ul>
+          <li><img src="/imagens/Facebook.png" alt="icone do facebook"></li>
+          <li><img src="imagens/twitter.png" alt="icone do twitter"></li>
+          <li><img src="imagens/youtube.png"  alt="icone do youtube"></li>
+          <li><img src="imagens/insta.png"  alt="icone do insta"></li>
+        </ul>
+      </nav>
+    </footer>
+  </body>
+  <script src="index.js"></script>
 </html>
