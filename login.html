@@ -5,6 +5,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Login</title>
     <link rel="stylesheet" href="loginStyle.css"/>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital@1&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com%22%3E/>
+    <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Just+Me+Again+Down+Here&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Inter:wght@400;600&display=swap" rel="stylesheet">
   </head>
 
   <body>
@@ -47,33 +59,49 @@
     </header>
 
     <main>
-      <div class="login-container">
-        <div class="title">Login</div>
-        <div class="content">
+      <div class="container-1">
+        <p>Login</p>
+        <div class="login-container">
+            <form action="#">
+                  
+                  <label for="email">Email</label>
+                  <input id="email" name="email" type="email" placeholder="Digite seu email" required/>
+                  <label for="senha">Senha</label>
+                  <input id="senha" name="senha" type="password" placeholder="Digite sua senha" required>
+                  <button type="submit">Entrar</button>
+            </form>
+        </div>
+      </div>
+      <div class="container-2">
+        <p>Cadastro</p>
+        <div class="cads-container">
           <form action="#">
-            <div class="user-details">
-              <div class="input-box">
-                <span class="details">Email</span>
-                <input type="email" placeholder="Digite seu email" required />
+            <div class="nome_sobrenome">
+              <div class="divDefault">
+                <p>Nome</p>
+                <input id="nome" name="nome" type="text"       placeholder=" Nome" required/>
               </div>
-              <div class="input-box">
-                <span class="details">Senha</span>
-                <!---- aqui talvez dê b.o -->
-                <input
-                  type="current-password"
-                  placeholder="Digite sua senha"
-                  required
-                />
-                <!--a-->
+              <div class="divDefault">
+                <p>Sobrenome</p>
+                <input id="sobrenome" name="sobrenome" type="text" placeholder=" Sobrenome" required>
               </div>
-              <div class="button">
-                <input type="submit" value="Entrar" />
+            </div>
+            <div class="nasc_cel">
+              <div class="divDefault">
+                <p>Data de Nascimento</p>
+                <input id="nasc" type="date" name="nasc">
+              </div>
+              <div class="divDefault">
+                <p>Celular</p>
+                <input type="tel">
+              </div>
+              <div class="cpf_email">
               </div>
             </div>
           </form>
         </div>
       </div>
-    </main>
 
+    </main>
   </body>
 </html>
