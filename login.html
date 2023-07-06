@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login</title>
+    <link rel="stylesheet" href="loginStyle.css"/>
+  </head>
+
+  <body>
+    <header>
+      <div class="top-nav">
+        <div class="logo">
+          <img src="/imagens/Logo.png" alt="imagem da logo" />
+          <p>ANUBIS</p>
+        </div>
+        <div class="busca">
+          <input type="text" placeholder="pesquise seu produto" />
+          <button>
+            <img src="/imagens/lupa.png" alt="botão de confirmar busca" />
+          </button>
+        </div>
+        <input id="menu-toggle" type="checkbox" />
+        <label class="menu-button-container" for="menu-toggle">
+          <div class="menu-button"></div>
+        </label>
+        <ul class="menu">
+          <li>
+            <a href="#"
+              ><img src="/imagens/Conta.png" alt="icone para conta"
+            /></a>
+          </li>
+          <li>
+            <a href="#"
+              ><img
+                src="/imagens/mercadinho.png"
+                alt="icone para o carrinho de compras"
+            /></a>
+          </li>
+          <li>
+            <a href="#"
+              ><img src="/imagens/Suporte.png" alt="icone do suporte"
+            /></a>
+          </li>
+        </ul>
+      </div>
+    </header>
+
+    <main>
+      <div class="login-container">
+        <div class="title">Login</div>
+        <div class="content">
+          <form action="#">
+            <div class="user-details">
+              <div class="input-box">
+                <span class="details">Email</span>
+                <input type="email" placeholder="Digite seu email" required />
+              </div>
+              <div class="input-box">
+                <span class="details">Senha</span>
+                <!---- aqui talvez dê b.o -->
+                <input
+                  type="current-password"
+                  placeholder="Digite sua senha"
+                  required
+                />
+                <!--a-->
+              </div>
+              <div class="button">
+                <input type="submit" value="Entrar" />
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </main>
+
+  </body>
+</html>
