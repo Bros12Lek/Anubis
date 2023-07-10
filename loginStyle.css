@@ -4,21 +4,33 @@
     padding: 0;  
 }
 
+:root {
+  font-size: 16px;
+  --royal-blue-light: #404eed;
+  --royal-blue-dark: #3946d4;
+  --white: #fff;
+  --backgroud: #e2e3e9;
+}
+
 body{
     height: 100vh;
     width: 100vw;
 }
 
-header{
-    margin-bottom: 15px;
+a {
+  color: var(--white);
+  text-decoration: none;
 }
 
-header img{
-    width: 31px;
-    height: 31px
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  background-color: #452E9F;
+  height: 4.6875rem;
 }
 
-header .logo{
+header .logo {
     font-family: 'Just Me Again Down Here', cursive;
     display: flex;
     text-transform: uppercase;
@@ -26,24 +38,24 @@ header .logo{
     font-weight: bolder;
 }
 
-.busca input{
-    border-radius: 5px;
-    height: 30px;
-    background-color: #D9D9D9;
-    outline: none;
-    border: none;
-    width: 85%;
+.busca input {
+  border-radius: 5px;
+  height: 30px;
+  background-color: #D9D9D9;
+  outline: none;
+  border: none;
+  width: 85%;
 }
 
-.busca{
-    width: 30%;
-    height: 25%;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
+.busca {
+  width: 30%;
+  height: 25%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
 }
 
-.busca button{
+.busca button {
     background-color: #D9D9D9;
     align-items: center;
     border: none;
@@ -52,155 +64,108 @@ header .logo{
     background-color: #452E9F;
 }
 
-.logo img{
+.logo img {
     width: 76px;
     height: 70px;
 }
 
-.top-nav {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: space-evenly;
-  background-color:#452E9F ;
+
+@media only screen and (max-width:428px) {
+  header .logo .p{
+    display: none;
+  }
 }
 
 .menu {
+  list-style: none;
   display: flex;
-  flex-direction: row;
-  list-style-type: none;
-  width: 15%;
-  justify-content: space-around;
+  gap: 0.5rem;
 }
 
-.menu > li {
-  overflow: hidden;
-}
-
-.menu-button-container {
-  display: none;
-  height: 100%;
-  width: 30px;
-  cursor: pointer;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-
-#menu-toggle {
-  display: none;
-}
-
-.menu-button,
-.menu-button::before,
-.menu-button::after {
+.menu a {
   display: block;
-  background-color: #fff;
-  position: absolute;
-  height: 4px;
-  width: 30px;
-  transition: transform 400ms cubic-bezier(0.23, 1, 0.32, 1);
-  border-radius: 2px;
+  padding: 1rem;
+  border-radius: 0.5rem;
 }
 
-.menu-button::before {
-  content: '';
-  margin-top: -8px;
+.menu a:hover {
+  background-color: #452E9F;
 }
 
-.menu-button::after {
-  content: '';
-  margin-top: 8px;
+.btn-menu {
+  display: none;
 }
 
-#menu-toggle:checked + .menu-button-container .menu-button::before {
-  margin-top: 0px;
-  transform: rotate(405deg);
-}
-
-#menu-toggle:checked + .menu-button-container .menu-button {
-  background: rgba(255, 255, 255, 0);
-}
-
-#menu-toggle:checked + .menu-button-container .menu-button::after {
-  margin-top: 0px;
-  transform: rotate(-405deg);
-}
-
-
-
-@media (max-width: 310px) {
-    header .logo p{
-        display: none;
-    }
-}
-
-
-@media (max-width: 700px) {
-    /* 
-    Responsividade do cabeçalho para telas de apartir de 700px
-    */
-
-
-  .menu-button-container {
-    display: flex;
-  }
+@media (max-width: 600px) {
   .menu {
+    display: block;
     position: absolute;
-    top: 0;
-    margin-top: 50px;
+    top: 4.6875rem;
     left: 0;
-    flex-direction: column;
+    background-color: #452E9F;
+    text-align: center;
     width: 100%;
-    justify-content: center;
-    align-items: center;
-  }
-  #menu-toggle ~ .menu li {
     height: 0;
-    margin: 0;
-    padding: 0;
-    border: 0;
-    transition: height 400ms cubic-bezier(0.23, 1, 0.32, 1);
+    z-index: 1;
+    visibility: hidden;
+    overflow-y: hidden;
+    transition: 0.5s;
   }
-  #menu-toggle:checked ~ .menu li {
-    border: 1px solid black;
-    height: 2.5em;
-    padding: 0.5em;
-    transition: height 400ms cubic-bezier(0.23, 1, 0.32, 1);
+  .menu a {
+    padding: 1rem 0;
+    margin-inline: 1rem;
+    border-bottom: 0.0625rem solid rgba(0, 0, 0, 0.16);
+    border-radius: 0;
   }
-  .menu > li {
+  .btn-menu {
+    background: none;
+    border: none;
+    font: inherit;
     display: flex;
-    justify-content: center;
-    padding: 0.5em 0;
-    width: 100%;
-    color: white;
-    background-color: rgba(69,	46,	159, 0.97);
+    align-items: center;
+    gap: 0.5rem;
+    color: black;
+    padding: 1rem 0;
+    cursor: pointer;
   }
-  .menu > li:not(:last-child) {
-    border-bottom: 1px solid #222;
+  .hamburger {
+    border-top: 0.125rem solid;
+    width: 1.25rem;
   }
-
-  .logo img{
-    width: 50px;
-    height: 50px;
+  .hamburger::after,
+  .hamburger::before {
+    content: " ";
+    display: block;
+    width: 1.25rem;
+    height: 0.125rem;
+    background: currentColor;
+    margin-top: 0.3125rem;
+    position: relative;
+    transition: 0.3s;
+  }
+  .nav.active .menu {
+    height: calc(100vh - 4.6875rem);
+    visibility: visible;
+    overflow-y: auto;
+  }
+  .nav.active .hamburger {
+    border-top-color: transparent;
+  }
+  .nav.active .hamburger::before {
+    transform: rotate(135deg);
+  }
+  .nav.active .hamburger::after {
+    transform: rotate(-135deg);
+    top: -0.4375rem;
+  }
 }
 
-.busca{
-    width: 50%;
+
+header img{
+    width: 31px;
+    height: 31px
 }
 
-header .logo{
-    font-size: small;
-}
-
-header button img{
-    height: 20px;
-    width: 20px;
-}
-    /* 
-    Responsividade do cabeçalho para telas de apartir de 700px
-    */
-}
 
 footer{
     width: 100%;
