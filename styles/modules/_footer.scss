@@ -1,1 +1,53 @@
 @import '../abstract/variables';
+
+footer {
+    border: 2px solid;
+    width: 100%;
+    background-color: $roxo-do-site;
+    position: fixed;
+    bottom: 0;
+    display: flex;
+    justify-content: space-around;
+    height: 15vh;
+    align-items: center;
+
+    .logo{
+        min-width: 5%;
+        height: 80%;
+        img{
+            height: 100%;
+            width: 100%;   
+
+        }
+
+    }
+    
+        
+    nav {
+        border: thin solid;
+
+
+        p {
+            font-family: 'Great Vibes', cursive 'Inter', sans-serif;
+            text-transform: uppercase;
+            display: flex;
+            justify-content: center;
+            font-weight: bolder;
+            font-size: large;
+        }
+        ul {
+            display: flex;
+            list-style: none;
+            justify-content: space-between;
+            width: 100%;
+            height: 100%;
+    
+            li{
+                img{
+                    width: 50%;
+                
+                }
+            }
+        }
+    }
+}
