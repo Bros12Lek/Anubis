@@ -1,4 +1,5 @@
 @import '../abstract/variables';
+@import '../abstract/functions';
 
 footer {
     border: 2px solid;
@@ -8,12 +9,24 @@ footer {
     bottom: 0;
     display: flex;
     justify-content: space-around;
-    height: 15vh;
+    height: 13vh;
     align-items: center;
 
     .logo{
         min-width: 5%;
         height: 80%;
+        display: flex;
+
+        p{
+            @include logoFonte;
+
+            //media querry
+            @media only screen and (max-width:426px) {
+                display: none;
+            }
+
+        }
+
         img{
             height: 100%;
             width: 100%;   
@@ -24,28 +37,47 @@ footer {
     
         
     nav {
-        border: thin solid;
+        width: 10%;
 
+        //Media Querries
+        @media only screen and (max-width:1440px) {
+            width: 25%;
+        }
 
-        p {
-            font-family: 'Great Vibes', cursive 'Inter', sans-serif;
-            text-transform: uppercase;
+        @media only screen and (max-width:768px) {
+            width: 25%;
+        }
+
+        @media only screen and (max-width:426px) {
+            width: 50%;
+        }
+
+        @media only screen and (max-width:320px) {
+            width: 60%;
+        }
+        
+        p{
+            @include logoFonte;
             display: flex;
             justify-content: center;
-            font-weight: bolder;
-            font-size: large;
+            margin-bottom: 10px;
         }
+    
         ul {
             display: flex;
             list-style: none;
             justify-content: space-between;
             width: 100%;
             height: 100%;
+            justify-content: space-around;
     
             li{
+                width: 100%;
+                overflow: hidden;
                 img{
-                    width: 50%;
-                
+                    width: 40px;
+                    height: 40px;
+                    cursor: pointer;
                 }
             }
         }

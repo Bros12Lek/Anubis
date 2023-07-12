@@ -9,7 +9,7 @@ header {
         display: grid;
         grid-template-columns: repeat(3, auto) ;
         align-items: center;
-        grid-template-rows: 1fr 1fr;
+        grid-template-rows: 1fr;
         background-color: #452E9F;
         height: 4.6875rem;
 
@@ -21,6 +21,7 @@ header {
         }
 
         .logo {
+            justify-content: center;
             @media only screen and (max-width:375px){
                 p{
                     display: none;
@@ -47,6 +48,7 @@ header {
         width: 35%;
         height: auto;
         grid-column: 2/3;
+        width: 100%;
 
         input {
           border-radius: 5px;
@@ -55,20 +57,29 @@ header {
           outline: none;
           border: none;
           width: 90%;
+
+          @media only screen and (max-width:768px){
+            margin-right: 5px;
+          }
         }
+
         button {
-          width: 20%;
-          height: 100%;
+          width: 8%;
+          height: 30px;
           border: none;
           border-radius: 5px;
           cursor: pointer;
           display: flex;
           align-items: center;
           justify-content: center;
-          background-color: red;
+          background-color: $roxo-do-site;
+          margin-right: 35px;
+          @media only screen and (max-width:425px){
+            margin-right: 40px;
+          }
           img{
-            width: 50%;
-            height: 50%;
+            width: auto;
+            height: auto;
 
           }
         }
@@ -89,7 +100,7 @@ header {
         list-style: none;
         display: flex;
         gap: 0.5rem;
-        border: thin solid;
+        justify-content: center;
         a {
           display: block;
           padding: 1rem;
