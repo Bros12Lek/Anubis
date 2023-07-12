@@ -6,3 +6,26 @@
     font-weight: bolder;
     text-transform: uppercase;
 }
+
+@mixin formFonte{
+    font-family: inter;
+    font-weight: 200;
+    font-size:medium;
+}
+
+@mixin botaoDefault {   
+    width: 100px;
+    height: 35px;
+    border-radius: 5px;
+    border: 1px;
+    font-family: inter;
+    background-color: $roxo-do-site;
+    font-weight: 400;
+    color: white;
+    cursor: pointer;
+}
+
+@mixin links{
+    color: black;
+    text-decoration: none;
+}

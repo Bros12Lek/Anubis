@@ -2,14 +2,11 @@
 @import '../abstract/functions';
 
 footer {
-    border: 2px solid;
-    width: 100%;
+    width: 100vw;
     background-color: $roxo-do-site;
-    position: fixed;
-    bottom: 0;
     display: flex;
     justify-content: space-around;
-    height: 13vh;
+    height: 15vh;
     align-items: center;
 
     .logo{
