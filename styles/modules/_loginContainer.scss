@@ -26,7 +26,7 @@ main{
   .container-1{
     font-family: inter;
     font-size: large;
-    margin-top: 40px;
+    margin-top: 2.5rem;
     display: flex;
     flex-direction: column;
     align-items: center; 
@@ -35,10 +35,10 @@ main{
 
     .login-container{
       border: thin solid $cor-da-borda;
-      border-radius: 5px;
+      border-radius: .3125rem;
       width: 30%;
       height: 65%;
-      margin-top: 10px;
+      margin-top: .625rem;
       background-color: #FFF9F9;
 
       @media only screen and (max-width:1024px){
@@ -53,7 +53,7 @@ main{
         @include links;
         display: flex;
         justify-content: center;
-        margin-top: 15px;
+        margin-top: .9rem;
       }
       form{
   
@@ -77,12 +77,12 @@ main{
         align-items: center;
   
         input {
-          height: 35px;
+          height: 2.1875rem;
           width: 85%;
           outline: none;
-          font-size: 16px;
-          border-radius: 5px;
-          padding-left: 15px;
+          font-size: 1rem;
+          border-radius: .3125rem;
+          padding-left: .9rem;
           border: 1px solid #ccc;
           border-bottom-width: 2px;
           transition: all 0.3s ease;

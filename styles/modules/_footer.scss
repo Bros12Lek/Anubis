@@ -6,8 +6,9 @@ footer {
     background-color: $roxo-do-site;
     display: flex;
     justify-content: space-around;
-    height: 15vh;
+    height: 10vh;
     align-items: center;
+    border: thin solid black;
 
     .logo{
         min-width: 5%;
@@ -57,7 +58,7 @@ footer {
             @include logoFonte;
             display: flex;
             justify-content: center;
-            margin-bottom: 10px;
+            margin-bottom: .625rem;
         }
     
         ul {
@@ -72,8 +73,8 @@ footer {
                 width: 100%;
                 overflow: hidden;
                 img{
-                    width: 40px;
-                    height: 40px;
+                    width: 2.5rem;
+                    height: 2.5rem;
                     cursor: pointer;
                 }
             }

@@ -14,15 +14,18 @@
 }
 
 @mixin botaoDefault {   
-    width: 100px;
-    height: 35px;
-    border-radius: 5px;
-    border: 1px;
-    font-family: inter;
-    background-color: $roxo-do-site;
-    font-weight: 400;
-    color: white;
-    cursor: pointer;
+    button{
+        width: 6.25rem;
+        height: 2.1875rem;
+        border-radius: 5px;
+        border: 1px;
+        font-family: inter;
+        background-color: $roxo-do-site;
+        font-weight: 400;
+        color: white;
+        cursor: pointer;
+    }
+    
 }
 
 @mixin links{

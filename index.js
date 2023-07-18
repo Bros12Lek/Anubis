@@ -1,7 +1,4 @@
 
-
-
-
 //Script da navbar responsiva
 const nav = document.querySelector(".nav");
 const btnMenu = document.querySelector(".btn-menu");

@@ -43,29 +43,30 @@ header .busca {
   width: 100%;
 }
 header .busca input {
-  border-radius: 5px;
-  height: 30px;
+  border-radius: 0.3125rem;
+  height: 1.875rem;
   background-color: #D9D9D9;
   outline: none;
   border: none;
   width: 90%;
+  padding: 0.7rem;
 }
 @media only screen and (max-width: 768px) {
   header .busca input {
-    margin-right: 5px;
+    margin-right: 0.3125rem;
   }
 }
 header .busca button {
   width: 8%;
-  height: 30px;
+  height: 1.875rem;
   border: none;
-  border-radius: 5px;
+  border-radius: 0.3125rem;
   cursor: pointer;
   display: flex;
   align-items: center;
   justify-content: center;
   background-color: #452E9F;
-  margin-right: 35px;
+  margin-right: 0.9rem;
 }
 @media only screen and (max-width: 425px) {
   header .busca button {
@@ -200,8 +201,9 @@ footer {
   background-color: #452E9F;
   display: flex;
   justify-content: space-around;
-  height: 15vh;
+  height: 10vh;
   align-items: center;
+  border: thin solid black;
 }
 footer .logo {
   min-width: 5%;
@@ -253,7 +255,7 @@ footer nav p {
   text-transform: uppercase;
   display: flex;
   justify-content: center;
-  margin-bottom: 10px;
+  margin-bottom: 0.625rem;
 }
 footer nav ul {
   display: flex;
@@ -268,8 +270,8 @@ footer nav ul li {
   overflow: hidden;
 }
 footer nav ul li img {
-  width: 40px;
-  height: 40px;
+  width: 2.5rem;
+  height: 2.5rem;
   cursor: pointer;
 }
 
@@ -295,7 +297,7 @@ main .login-in {
 main .container-1 {
   font-family: inter;
   font-size: large;
-  margin-top: 40px;
+  margin-top: 2.5rem;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -304,10 +306,10 @@ main .container-1 {
 }
 main .container-1 .login-container {
   border: thin solid #898080;
-  border-radius: 5px;
+  border-radius: 0.3125rem;
   width: 30%;
   height: 65%;
-  margin-top: 10px;
+  margin-top: 0.625rem;
   background-color: #FFF9F9;
 }
 @media only screen and (max-width: 1024px) {
@@ -325,7 +327,7 @@ main .container-1 .login-container a {
   text-decoration: none;
   display: flex;
   justify-content: center;
-  margin-top: 15px;
+  margin-top: 0.9rem;
 }
 main .container-1 .login-container form {
   font-family: inter;
@@ -338,9 +340,9 @@ main .container-1 .login-container form {
   justify-content: space-evenly;
   align-items: center;
 }
-main .container-1 .login-container form button {
-  width: 100px;
-  height: 35px;
+main .container-1 .login-container form button button {
+  width: 6.25rem;
+  height: 2.1875rem;
   border-radius: 5px;
   border: 1px;
   font-family: inter;
@@ -355,12 +357,12 @@ main .container-1 .login-container form label {
   width: 85%;
 }
 main .container-1 .login-container form input {
-  height: 35px;
+  height: 2.1875rem;
   width: 85%;
   outline: none;
-  font-size: 16px;
-  border-radius: 5px;
-  padding-left: 15px;
+  font-size: 1rem;
+  border-radius: 0.3125rem;
+  padding-left: 0.9rem;
   border: 1px solid #ccc;
   border-bottom-width: 2px;
   transition: all 0.3s ease;
@@ -368,4 +370,67 @@ main .container-1 .login-container form input {
 }
 main .container-1 .login-container form input:focus, main .container-1 .login-container form input:valid {
   border-color: rgb(97, 66, 218);
+}
+
+main .conta-container {
+  width: 100%;
+  height: 100%;
+  border: 2px solid;
+  font-family: inter;
+  font-weight: 200;
+  font-size: medium;
+}
+main .conta-container button {
+  width: 6.25rem;
+  height: 2.1875rem;
+  border-radius: 5px;
+  border: 1px;
+  font-family: inter;
+  background-color: #452E9F;
+  font-weight: 400;
+  color: white;
+  cursor: pointer;
+}
+main .conta-container .sub-container {
+  width: 100%;
+  height: 100%;
+}
+main .conta-container .sub-container .informacoes {
+  display: flex;
+  flex-direction: column;
+  border: 3px solid darkblue;
+  height: 100%;
+}
+main .conta-container .sub-container .informacoes .cartoes {
+  display: grid;
+  grid-template-columns: auto;
+  grid-template-rows: auto 1fr 18%;
+  width: 30rem;
+  height: 30%;
+  background-color: white;
+}
+main .conta-container .sub-container .informacoes .cartoes .tittle-card {
+  grid-row: 1/2;
+  justify-self: center;
+}
+main .conta-container .sub-container .informacoes .cartoes .foot-card {
+  grid-row: 3/4;
+  display: flex;
+  justify-content: end;
+  width: 95%;
+}
+main .conta-container .sub-container .informacoes .cartoes .foot-card button {
+  width: 8.5rem;
+}
+main .conta-container .sub-container .informacoes .enderecos {
+  display: grid;
+  grid-template-columns: auto;
+  grid-template-rows: auto 1fr 18%;
+  width: 30rem;
+  height: 30%;
+  background-color: white;
+  border: orange solid;
+}
+main .conta-container .sub-container .informacoes .enderecos button {
+  width: 8.5rem;
 }/*# sourceMappingURL=style.css.map */
