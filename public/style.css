@@ -1,0 +1,68 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: linear-gradient(180deg, #FFFFFF 0%, #E9E8EE 24.48%, #E7E6ED 55.21%, rgba(97, 66, 218, 0) 100%);
+  font-family: "Poppins", sans-serif;
+}
+
+.title {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.cadastro {
+  background-color: #FFF9F9;
+  margin: 0 auto;
+  width: 90%;
+  max-width: 850px;
+  padding: 20px;
+  position: relative; /* Adicionado para permitir posicionamento absoluto do botão */
+}
+
+input, label {
+  display: flex;
+  margin-bottom: 10px;
+}
+
+input[type="email"],
+input[type="password"],
+input[type="text"],
+input[type="date"] {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+button{
+  background: blueviolet;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  padding: 10px 20px;
+  cursor: pointer;
+}
+#enviar {
+  margin-top: 20px;
+  /* Posicionamento absoluto no canto inferior direito */
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+}
+
+@media screen and (min-width: 600px) {
+  .cadastro {
+    width: 70%;
+  }
+}
+
+@media screen and (min-width: 900px) {
+  .cadastro {
+    width: 50%;
+  }
+}
