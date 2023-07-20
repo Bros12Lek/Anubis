@@ -4,6 +4,10 @@
 -- ------------------------------------------------------
 -- Server version	8.0.31
 
+DROP DATABASE IF EXISTS usuario_database;
+create database usuario_database;
+use usuario_database;
+
 /*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
 /*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
 /*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
