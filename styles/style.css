@@ -392,14 +392,17 @@ main .conta-container button {
   cursor: pointer;
 }
 main .conta-container .sub-container {
+  display: flex;
+  justify-content: space-around;
   width: 100%;
   height: 100%;
+  gap: 5%;
 }
 main .conta-container .sub-container .informacoes {
   display: flex;
   flex-direction: column;
-  border: 3px solid darkblue;
   height: 100%;
+  gap: 1rem;
 }
 main .conta-container .sub-container .informacoes .cartoes {
   display: grid;
@@ -411,7 +414,9 @@ main .conta-container .sub-container .informacoes .cartoes {
 }
 main .conta-container .sub-container .informacoes .cartoes .tittle-card {
   grid-row: 1/2;
-  justify-self: center;
+  display: flex;
+  justify-self: start;
+  margin-left: 1.5rem;
 }
 main .conta-container .sub-container .informacoes .cartoes .foot-card {
   grid-row: 3/4;
@@ -429,8 +434,87 @@ main .conta-container .sub-container .informacoes .enderecos {
   width: 30rem;
   height: 30%;
   background-color: white;
-  border: orange solid;
+}
+main .conta-container .sub-container .informacoes .enderecos .tittle-endereco {
+  grid-row: 1/2;
+  display: flex;
+  justify-self: start;
+  margin-left: 1.5rem;
 }
 main .conta-container .sub-container .informacoes .enderecos button {
   width: 8.5rem;
+}
+main .conta-container .sub-container .informacoes .enderecos .foot-endereco {
+  display: flex;
+  grid-row: 3/4;
+  width: 95%;
+  justify-content: end;
+}
+main .conta-container .sub-container .informacoes .senha {
+  display: grid;
+  grid-template-columns: auto;
+  grid-template-rows: auto 1fr 18%;
+  width: 30rem;
+  height: 30%;
+  background-color: white;
+}
+main .conta-container .sub-container .informacoes .senha .tittle-senha {
+  grid-row: 1/2;
+  display: flex;
+  justify-self: start;
+  margin-left: 1.5rem;
+}
+main .conta-container .sub-container .informacoes .senha label {
+  margin-left: 1.5rem;
+}
+main .conta-container .sub-container .informacoes .senha input {
+  height: 1.8rem;
+  width: 50%;
+  outline: none;
+  font-size: 1rem;
+  border-radius: 0.3125rem;
+  padding-left: 0.9rem;
+  border: 1px solid #ccc;
+  border-bottom-width: 2px;
+  transition: all 0.3s ease;
+  background-color: rgba(237, 237, 237, 0.25);
+  margin-left: 1.5rem;
+  margin-bottom: 1rem;
+}
+main .conta-container .sub-container .informacoes .senha input:focus, main .conta-container .sub-container .informacoes .senha input:valid {
+  border-color: rgb(97, 66, 218);
+}
+main .conta-container .sub-container .informacoes .senha .content {
+  display: flex;
+  flex-direction: column;
+  grid-row: 2/3;
+  justify-content: center;
+}
+main .conta-container .sub-container .informacoes .senha .foot-senha {
+  display: flex;
+  grid-row: 3/4;
+  width: 95%;
+  justify-content: end;
+}
+main .conta-container .sub-container .hist-shop {
+  display: grid;
+  width: 10rem;
+  height: 92%;
+  width: 60rem;
+  background-color: white;
+  grid-template-columns: auto;
+  grid-template-rows: 5% 1fr;
+}
+main .conta-container .sub-container .hist-shop .tittle-histShop {
+  margin-left: 1.5rem;
+  grid-row: 1/2;
+  align-self: center;
+}
+main .conta-container .sub-container .hist-shop .content-hist {
+  display: flex;
+  flex-flow: column wrap;
+  grid-row: 2/3;
+  overflow-y: auto;
+  width: 90%;
+  margin-left: 2rem;
 }/*# sourceMappingURL=style.css.map */
