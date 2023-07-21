@@ -340,7 +340,7 @@ main .container-1 .login-container form {
   justify-content: space-evenly;
   align-items: center;
 }
-main .container-1 .login-container form button button {
+main .container-1 .login-container form button {
   width: 6.25rem;
   height: 2.1875rem;
   border-radius: 5px;

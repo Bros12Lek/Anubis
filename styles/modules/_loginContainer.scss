@@ -56,10 +56,7 @@ main{
         margin-top: .9rem;
       }
       form{
-  
-        button{
-          @include botaoDefault;
-        }
+       @include botaoDefault;
   
         label{
           display: flex;
