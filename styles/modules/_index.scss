@@ -8,21 +8,26 @@ main{
         justify-content: center;
         margin-top: 5%;
         flex-wrap: wrap;
-    }
-    .card{
-        margin: 0 20px 0 20px;
-    }
-    .card__img{
-        //config dos cards da primeira seção 
-        @include cardVizual;
-    }
-    .card__img img{
-        // config de imgs da primeira seção 
-        display: block;
-        margin: 0 auto;
-    }
-    .card__text{
-        text-align: center;
+
+        .card{
+
+            margin: 0 20px 0 20px;
+
+            .card__img{
+                //config dos cards da primeira seção 
+                @include cardVizual;
+                img{
+                    margin: auto;
+                    width: 70%;
+                    height: 60%;
+                }
+            }
+            .card__text{
+                text-align: center;
+            }
+        }
+    
+
     }
 
     .promo__add-placas{
@@ -54,6 +59,7 @@ main{
     .d__flex-produtos{
         // flex da div produtos, trabalhando a responsividade da seção inteira 
         display: flex;
+        gap: 2%;
         flex-wrap: wrap;
         justify-content: center;
         text-align: center;
@@ -64,11 +70,9 @@ main{
     }
     .card__produtos{
         // configuração do card de produtos 
-        display: block;
-        margin: 15px 10px 0 0;
-        background-color: var(--cardColor);
+        background-color: white;
         height: 27.9vh;
-        width: 18vh;
+        width: 8%;
         border-radius: 10px;   
         overflow: hidden; 
         transition: 0.2s ease-in-out;
@@ -90,7 +94,12 @@ main{
         justify-content: center;
     }
     .card__text-produtosOverflow{
-        margin-top: 65px;
+            margin-top: 65px;
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: space-around;
+    height: 10rem;
+    align-items: center;
     }
     .card__img-produtos img{
         // medidas de imagens padronizadas se der bug olhem aq 
@@ -106,12 +115,11 @@ main{
         // responsividade das marcas 
         display: flex;
         justify-content: center;
+        gap: 4rem;
     }
     .card__marcas{
         // configuração dos cards de marcas 
-        background-color: var(--cardColor);
-        display: block;
-        margin: 10px 0 0 15px;
+        background-color: white;
         height: 14vh;
         width: 13vh;
         border-radius: 10px;
