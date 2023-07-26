@@ -1,6 +1,10 @@
 @import '../abstract/variables';
 @import '../abstract/functions';
 
+.bodyLogin{
+  height: 100vh;
+}
+
 main{
   .pLogin{
     font-weight: 800;

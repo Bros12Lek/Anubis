@@ -1,7 +1,8 @@
 let btn = document.querySelector('.btnLogin');
 let form = document.querySelector('form');
+let inputEmail = document.querySelector('#email')
 
-form.addEventListener('submit' ,(event) =>{
-    event.preventDefault();
-    console.log(event);
+form.addEventListener('invalid', (e) =>{
+    e.preventDefault()
+    console.log(e);
 })
