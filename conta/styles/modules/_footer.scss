@@ -1,0 +1,83 @@
+@import '../abstract/variables';
+@import '../abstract/functions';
+
+footer {
+    width: 100vw;
+    background-color: $roxo-do-site;
+    display: flex;
+    justify-content: space-around;
+    height: 10vh;
+    align-items: center;
+    border: thin solid black;
+
+    .logo{
+        min-width: 5%;
+        height: 80%;
+        display: flex;
+
+        p{
+            @include logoFonte;
+
+            //media querry
+            @media only screen and (max-width:426px) {
+                display: none;
+            }
+
+        }
+
+        img{
+            height: 100%;
+            width: 100%;   
+
+        }
+
+    }
+    
+        
+    nav {
+        width: 10%;
+
+        //Media Querries
+        @media only screen and (max-width:1440px) {
+            width: 25%;
+        }
+
+        @media only screen and (max-width:768px) {
+            width: 25%;
+        }
+
+        @media only screen and (max-width:426px) {
+            width: 50%;
+        }
+
+        @media only screen and (max-width:320px) {
+            width: 60%;
+        }
+        
+        p{
+            @include logoFonte;
+            display: flex;
+            justify-content: center;
+            margin-bottom: .625rem;
+        }
+    
+        ul {
+            display: flex;
+            list-style: none;
+            justify-content: space-between;
+            width: 100%;
+            height: 100%;
+            justify-content: space-around;
+    
+            li{
+                width: 100%;
+                overflow: hidden;
+                img{
+                    width: 2.5rem;
+                    height: 2.5rem;
+                    cursor: pointer;
+                }
+            }
+        }
+    }
+}

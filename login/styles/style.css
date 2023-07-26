@@ -1,0 +1,520 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  display: grid;
+  grid-template-columns: repeat(3, auto);
+  align-items: center;
+  grid-template-rows: 1fr;
+  background-color: #452E9F;
+  height: 4.6875rem;
+}
+header ul img {
+  width: 25px;
+  height: 25px;
+}
+header .logo {
+  justify-content: center;
+  grid-column: 1/2;
+  grid-row: 1/3;
+  font-family: "Just Me Again Down Here", cursive;
+  display: flex;
+  text-transform: uppercase;
+  font-size: x-large;
+  font-weight: bolder;
+}
+@media only screen and (max-width: 375px) {
+  header .logo p {
+    display: none;
+  }
+}
+header .logo img {
+  width: 76px;
+  height: 70px;
+}
+header .busca {
+  display: flex;
+  align-items: center;
+  height: auto;
+  grid-column: 2/3;
+  width: 100%;
+}
+header .busca input {
+  border-radius: 0.3125rem;
+  height: 1.875rem;
+  background-color: #D9D9D9;
+  outline: none;
+  border: none;
+  width: 90%;
+  padding: 0.7rem;
+}
+@media only screen and (max-width: 768px) {
+  header .busca input {
+    margin-right: 0.3125rem;
+  }
+}
+header .busca button {
+  width: 8%;
+  height: 1.875rem;
+  border: none;
+  border-radius: 0.3125rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #452E9F;
+  margin-right: 0.9rem;
+}
+@media only screen and (max-width: 425px) {
+  header .busca button {
+    margin-right: 40px;
+  }
+}
+header .busca button img {
+  width: auto;
+  height: auto;
+}
+header .logo img {
+  width: 76px;
+  height: 70px;
+}
+@media only screen and (max-width: 428px) {
+  header header .logo .p {
+    display: none;
+  }
+}
+header .menu {
+  list-style: none;
+  display: flex;
+  gap: 0.5rem;
+  justify-content: center;
+}
+header .menu a {
+  display: block;
+  padding: 1rem;
+  border-radius: 0.5rem;
+}
+header .menu a:hover {
+  background-color: #452E9F;
+}
+header .btn-menu {
+  display: none;
+}
+@media only screen and (max-width: 600px) {
+  header .menu {
+    display: block;
+    position: absolute;
+    top: 4.6875rem;
+    left: 0;
+    background-color: #452E9F;
+    text-align: center;
+    width: 100%;
+    height: 0;
+    z-index: 1;
+    visibility: hidden;
+    overflow-y: hidden;
+    transition: 0.5s;
+  }
+  header .menu a {
+    padding: 1rem 0;
+    margin-inline: 1rem;
+    border-bottom: 0.0625rem solid rgba(0, 0, 0, 0.16);
+    border-radius: 0;
+  }
+  header .btn-menu {
+    background: none;
+    border: none;
+    font: inherit;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: black;
+    padding: 1rem 0;
+    cursor: pointer;
+  }
+  header .hamburger {
+    border-top: 0.125rem solid;
+    width: 1.25rem;
+  }
+  header .hamburger::after, header .hamburger::before {
+    content: " ";
+    display: block;
+    width: 1.25rem;
+    height: 0.125rem;
+    background: currentColor;
+    margin-top: 0.3125rem;
+    position: relative;
+    transition: 0.3s;
+  }
+  header .nav.active .menu {
+    height: calc(100vh - 4.6875rem);
+    visibility: visible;
+    overflow-y: auto;
+  }
+  header .nav.active .hamburger {
+    border-top-color: transparent;
+  }
+  header .nav.active .hamburger::before {
+    transform: rotate(135deg);
+  }
+  header .nav.active .hamburger::after {
+    transform: rotate(-135deg);
+    top: -0.4375rem;
+  }
+}
+
+body {
+  height: 100vh;
+  width: 100vw;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: auto 1fr auto;
+  background: rgb(255, 255, 255);
+  background: linear-gradient(180deg, rgb(255, 255, 255) 0%, rgb(233, 232, 238) 25%, rgb(233, 232, 238) 50%, rgba(97, 66, 218, 0.4878326331) 100%);
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+body img {
+  width: 50px;
+  height: 50px;
+}
+
+header {
+  grid-column: 1/4;
+}
+
+main {
+  grid-column: 1/4;
+  grid-row: 2/3;
+}
+
+footer {
+  grid-column: 1/2;
+  grid-row: 3/4;
+}
+
+footer {
+  width: 100vw;
+  background-color: #452E9F;
+  display: flex;
+  justify-content: space-around;
+  height: 10vh;
+  align-items: center;
+  border: thin solid black;
+}
+footer .logo {
+  min-width: 5%;
+  height: 80%;
+  display: flex;
+}
+footer .logo p {
+  font-family: "Just Me Again Down Here", cursive;
+  font-size: x-large;
+  font-weight: bolder;
+  text-transform: uppercase;
+}
+@media only screen and (max-width: 426px) {
+  footer .logo p {
+    display: none;
+  }
+}
+footer .logo img {
+  height: 100%;
+  width: 100%;
+}
+footer nav {
+  width: 10%;
+}
+@media only screen and (max-width: 1440px) {
+  footer nav {
+    width: 25%;
+  }
+}
+@media only screen and (max-width: 768px) {
+  footer nav {
+    width: 25%;
+  }
+}
+@media only screen and (max-width: 426px) {
+  footer nav {
+    width: 50%;
+  }
+}
+@media only screen and (max-width: 320px) {
+  footer nav {
+    width: 60%;
+  }
+}
+footer nav p {
+  font-family: "Just Me Again Down Here", cursive;
+  font-size: x-large;
+  font-weight: bolder;
+  text-transform: uppercase;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 0.625rem;
+}
+footer nav ul {
+  display: flex;
+  list-style: none;
+  justify-content: space-between;
+  width: 100%;
+  height: 100%;
+  justify-content: space-around;
+}
+footer nav ul li {
+  width: 100%;
+  overflow: hidden;
+}
+footer nav ul li img {
+  width: 2.5rem;
+  height: 2.5rem;
+  cursor: pointer;
+}
+
+main .pLogin {
+  font-weight: 800;
+  font-size: x-large;
+}
+@media only screen and (max-width: 425px) {
+  main .pLogin {
+    display: none;
+  }
+}
+main .login-in {
+  font-weight: 800;
+  font-size: x-large;
+  display: none;
+}
+@media only screen and (max-width: 425px) {
+  main .login-in {
+    display: flex;
+  }
+}
+main .container-1 {
+  font-family: inter;
+  font-size: large;
+  margin-top: 2.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 70%;
+}
+main .container-1 .login-container {
+  border: thin solid #898080;
+  border-radius: 0.3125rem;
+  width: 30%;
+  height: 65%;
+  margin-top: 0.625rem;
+  background-color: #FFF9F9;
+}
+@media only screen and (max-width: 1024px) {
+  main .container-1 .login-container {
+    width: 50%;
+  }
+}
+@media only screen and (max-width: 425px) {
+  main .container-1 .login-container {
+    width: 80%;
+  }
+}
+main .container-1 .login-container a {
+  color: black;
+  text-decoration: none;
+  display: flex;
+  justify-content: center;
+  margin-top: 0.9rem;
+}
+main .container-1 .login-container form {
+  font-family: inter;
+  font-weight: 200;
+  font-size: medium;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+  justify-content: space-evenly;
+  align-items: center;
+}
+main .container-1 .login-container form button button {
+  width: 6.25rem;
+  height: 2.1875rem;
+  border-radius: 5px;
+  border: 1px;
+  font-family: inter;
+  background-color: #452E9F;
+  font-weight: 400;
+  color: white;
+  cursor: pointer;
+}
+main .container-1 .login-container form label {
+  display: flex;
+  justify-content: start;
+  width: 85%;
+}
+main .container-1 .login-container form input {
+  height: 2.1875rem;
+  width: 85%;
+  outline: none;
+  font-size: 1rem;
+  border-radius: 0.3125rem;
+  padding-left: 0.9rem;
+  border: 1px solid #ccc;
+  border-bottom-width: 2px;
+  transition: all 0.3s ease;
+  background-color: rgba(237, 237, 237, 0.25);
+}
+main .container-1 .login-container form input:focus, main .container-1 .login-container form input:valid {
+  border-color: rgb(97, 66, 218);
+}
+
+main .conta-container {
+  width: 100%;
+  height: 100%;
+  border: 2px solid;
+  font-family: inter;
+  font-weight: 200;
+  font-size: medium;
+}
+main .conta-container button {
+  width: 6.25rem;
+  height: 2.1875rem;
+  border-radius: 5px;
+  border: 1px;
+  font-family: inter;
+  background-color: #452E9F;
+  font-weight: 400;
+  color: white;
+  cursor: pointer;
+}
+main .conta-container .sub-container {
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+  height: 100%;
+  gap: 5%;
+}
+main .conta-container .sub-container .informacoes {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  gap: 1rem;
+}
+main .conta-container .sub-container .informacoes .cartoes {
+  display: grid;
+  grid-template-columns: auto;
+  grid-template-rows: auto 1fr 18%;
+  width: 30rem;
+  height: 30%;
+  background-color: white;
+}
+main .conta-container .sub-container .informacoes .cartoes .tittle-card {
+  grid-row: 1/2;
+  display: flex;
+  justify-self: start;
+  margin-left: 1.5rem;
+}
+main .conta-container .sub-container .informacoes .cartoes .foot-card {
+  grid-row: 3/4;
+  display: flex;
+  justify-content: end;
+  width: 95%;
+}
+main .conta-container .sub-container .informacoes .cartoes .foot-card button {
+  width: 8.5rem;
+}
+main .conta-container .sub-container .informacoes .enderecos {
+  display: grid;
+  grid-template-columns: auto;
+  grid-template-rows: auto 1fr 18%;
+  width: 30rem;
+  height: 30%;
+  background-color: white;
+}
+main .conta-container .sub-container .informacoes .enderecos .tittle-endereco {
+  grid-row: 1/2;
+  display: flex;
+  justify-self: start;
+  margin-left: 1.5rem;
+}
+main .conta-container .sub-container .informacoes .enderecos button {
+  width: 8.5rem;
+}
+main .conta-container .sub-container .informacoes .enderecos .foot-endereco {
+  display: flex;
+  grid-row: 3/4;
+  width: 95%;
+  justify-content: end;
+}
+main .conta-container .sub-container .informacoes .senha {
+  display: grid;
+  grid-template-columns: auto;
+  grid-template-rows: auto 1fr 18%;
+  width: 30rem;
+  height: 30%;
+  background-color: white;
+}
+main .conta-container .sub-container .informacoes .senha .tittle-senha {
+  grid-row: 1/2;
+  display: flex;
+  justify-self: start;
+  margin-left: 1.5rem;
+}
+main .conta-container .sub-container .informacoes .senha label {
+  margin-left: 1.5rem;
+}
+main .conta-container .sub-container .informacoes .senha input {
+  height: 1.8rem;
+  width: 50%;
+  outline: none;
+  font-size: 1rem;
+  border-radius: 0.3125rem;
+  padding-left: 0.9rem;
+  border: 1px solid #ccc;
+  border-bottom-width: 2px;
+  transition: all 0.3s ease;
+  background-color: rgba(237, 237, 237, 0.25);
+  margin-left: 1.5rem;
+  margin-bottom: 1rem;
+}
+main .conta-container .sub-container .informacoes .senha input:focus, main .conta-container .sub-container .informacoes .senha input:valid {
+  border-color: rgb(97, 66, 218);
+}
+main .conta-container .sub-container .informacoes .senha .content {
+  display: flex;
+  flex-direction: column;
+  grid-row: 2/3;
+  justify-content: center;
+}
+main .conta-container .sub-container .informacoes .senha .foot-senha {
+  display: flex;
+  grid-row: 3/4;
+  width: 95%;
+  justify-content: end;
+}
+main .conta-container .sub-container .hist-shop {
+  display: grid;
+  width: 10rem;
+  height: 92%;
+  width: 60rem;
+  background-color: white;
+  grid-template-columns: auto;
+  grid-template-rows: 5% 1fr;
+}
+main .conta-container .sub-container .hist-shop .tittle-histShop {
+  margin-left: 1.5rem;
+  grid-row: 1/2;
+  align-self: center;
+}
+main .conta-container .sub-container .hist-shop .content-hist {
+  display: flex;
+  flex-flow: column wrap;
+  grid-row: 2/3;
+  overflow-y: auto;
+  width: 90%;
+  margin-left: 2rem;
+}/*# sourceMappingURL=style.css.map */

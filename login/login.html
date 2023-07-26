@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital@1&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com%22%3E/>
+    <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Just+Me+Again+Down+Here&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Inter:wght@400;600&display=swap"
+      rel="stylesheet"
+    />
+    <link href='https://unpkg.com/css.gg@2.0.0/icons/css/search.css' rel='stylesheet'>
+
+    <link rel="stylesheet" href="style.css"/>
+  </head>
+
+  <body>
+    <header class="header">
+      <div class="logo">
+        <img src="login/imagens/Logo.png" alt="imagem da logo">
+        <p>ANUBIS</p>
+      </div>
+      <div class="busca">
+        <input type="text" placeholder="pesquise seu produto">
+        <button> <i class="gg-search"></i> </button>
+    </div>
+      <nav class="nav">
+        <button
+          class="btn-menu"
+          aria-label="Abrir Menu"
+          aria-haspopup="true"
+          aria-controls="menu"
+          aria-expanded="false"
+        >
+        <span class="hamburger"></span>
+        </button>
+        <ul class="menu" id="menu" role="menu">
+          <li class="nav-item-1">
+            <a class="nav-link" href="#"
+              ><img src="login/imagens/Conta.png" alt="icone para conta"
+            /></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#"
+              ><img
+                src="login/imagens/mercadinho.png"
+                alt="icone para o carrinho de compras"
+            /></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#"
+              ><img src="login/imagens/Suporte.png" alt="icone do suporte"
+            /></a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <div class="container-1">
+        <p class="pLogin">Login</p>
+        <div class="login-container">
+
+          <form action="enviado" method="post">
+            <p class="login-in">Login</p>
+            <label for="email">Email</label>
+            <input
+              id="email"
+              name="email"
+              type="email"
+              placeholder="Digite seu email"
+              required
+            />
+            <label for="senha">Senha</label>
+            <input
+              id="senha"
+              name="senha"
+              type="password"
+              placeholder="Digite sua senha"
+              required
+            />
+            <button type="submit">Entrar</button>
+          </form>
+          
+          <a href="#">Esqueceu a senha? Recupere aqui !</a>
+        </div>
+      </div>
+    </main>
+    <footer>
+      <div class="logo">
+        <img src="login/imagens/Logo.png" alt="imagem da logo">
+        <p>Anubis</p>
+      </div>
+      
+      <nav>
+        <p>Siga-nos</p>
+        <ul>
+          <li><img src="login/imagens/Facebook.png" alt="icone do facebook"></li>
+          <li><img src="login/imagens/twitter.png" alt="icone do twitter"></li>
+          <li><img src="login/imagens/youtube.png"  alt="icone do youtube"></li>
+          <li><img src="login/imagens/insta.png"  alt="icone do insta"></li>
+        </ul>
+      </nav>
+    </footer>
+  </body>
+</html>
