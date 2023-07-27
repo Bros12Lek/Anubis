@@ -43,11 +43,19 @@ header .busca {
   width: 100%;
 }
 header .busca input {
+<<<<<<< HEAD
+  border-radius: 5px;
+  height: 30px;
+  background-color: #FFF9F9;
+  outline: black;
+  border: solid;
+=======
   border-radius: 0.3125rem;
   height: 1.875rem;
   background-color: #D9D9D9;
   outline: none;
   border: none;
+>>>>>>> 3590dadb2ac403f86f3ccc0a762a1eb385e5ab24
   width: 90%;
   padding: 0.7rem;
 }
@@ -165,13 +173,13 @@ header .btn-menu {
     top: -0.4375rem;
   }
 }
-
+/*
 body {
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-template-rows: auto 1fr auto;
   background: rgb(255, 255, 255);
-  background: linear-gradient(180deg, rgb(255, 255, 255) 0%, rgb(233, 232, 238) 25%, rgb(233, 232, 238) 50%, rgba(97, 66, 218, 0.4878326331) 100%);
+  background: linear-gradient(180deg, #ffffff 0%, #e9e8ee 25%, #e9e8ee 50%, #6142da7c 100%);
   background-repeat: no-repeat;
   background-size: contain;
 }
@@ -179,7 +187,7 @@ body img {
   width: 50px;
   height: 50px;
 }
-
+*/
 header {
   grid-column: 1/4;
 }
@@ -203,6 +211,11 @@ footer {
   }
 }
 footer {
+<<<<<<< HEAD
+  
+ 
+=======
+>>>>>>> 3590dadb2ac403f86f3ccc0a762a1eb385e5ab24
   background-color: #452E9F;
   display: flex;
   justify-content: space-around;

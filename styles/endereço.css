@@ -1,0 +1,48 @@
+/* ENDEREÇO */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body, html{
+    background-repeat: no-repeat;
+    background-size: contain;
+    background: linear-gradient(180deg, #ffffff 0%, #e9e8ee 25%, #d0cbe6 50%, #6142da7c 100%);
+}
+
+.cont-end{
+    padding: 61px 100px;
+    display: grid;
+    justify-content: center;
+}
+
+.branco{
+    width: 15.75rem;
+    height: 22.8125rem;
+    background-color: #FFF9F9;
+    border: 1px solid #898080;
+    border-radius: 5px;
+    padding: 10px 10px;
+    
+}
+
+.endereco{
+    padding: 20px 0px;
+    width: 100%;
+}
+
+.endebranco{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+form{
+    padding: 15px 25px;
+}
+
+.endebranco h1 {
+    font-size: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+}
