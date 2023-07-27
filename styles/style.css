@@ -43,19 +43,11 @@ header .busca {
   width: 100%;
 }
 header .busca input {
-<<<<<<< HEAD
   border-radius: 5px;
   height: 30px;
   background-color: #FFF9F9;
-  outline: black;
+  outline:none;
   border: solid;
-=======
-  border-radius: 0.3125rem;
-  height: 1.875rem;
-  background-color: #D9D9D9;
-  outline: none;
-  border: none;
->>>>>>> 3590dadb2ac403f86f3ccc0a762a1eb385e5ab24
   width: 90%;
   padding: 0.7rem;
 }
@@ -169,11 +161,11 @@ header .btn-menu {
     transform: rotate(135deg);
   }
   header .nav.active .hamburger::after {
-    transform: rotate(-135deg);
+    transform: rote(-135deg);
     top: -0.4375rem;
   }
 }
-/*
+
 body {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -183,11 +175,11 @@ body {
   background-repeat: no-repeat;
   background-size: contain;
 }
-body img {
+bo img {
   width: 50px;
   height: 50px;
 }
-*/
+
 header {
   grid-column: 1/4;
 }
@@ -211,22 +203,7 @@ footer {
   }
 }
 footer {
-<<<<<<< HEAD
-  
- 
-=======
->>>>>>> 3590dadb2ac403f86f3ccc0a762a1eb385e5ab24
-  background-color: #452E9F;
-  display: flex;
-  justify-content: space-around;
-  height: 10vh;
-  align-items: center;
-  border: thin solid black;
-}
-footer .logo {
-  min-width: 5%;
-  height: 80%;
-  display: flex;
+ display: flex;
 }
 footer .logo p {
   font-family: "Just Me Again Down Here", cursive;
