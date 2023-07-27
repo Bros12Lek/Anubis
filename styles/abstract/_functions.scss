@@ -8,7 +8,7 @@
 }
 
 @mixin formFonte{
-    font-family: inter;
+    font-family: $font-geral;
     font-weight: 200;
     font-size:medium;
 }
@@ -18,7 +18,7 @@
     height: 35px;
     border-radius: 5px;
     border: 1px;
-    font-family: inter;
+    font-family: $font-geral;
     background-color: $roxo-do-site;
     font-weight: 400;
     color: white;
@@ -28,4 +28,26 @@
 @mixin links{
     color: black;
     text-decoration: none;
+}
+
+@mixin cardVizual{
+    background-color: white;
+    height: 7rem;
+    width: 7rem;
+    display: block;
+    margin: 0 auto;
+    border-radius: 10px;
+    border: thin solid black;
+    display: flex;
+    align-items: center;
+    transition-duration: .8s;
+    transition-property: all;
+    
+
+    @media only screen and (min-width:1024px) {
+        &:hover{
+            background-color: $roxo-do-site;
+            opacity: .8;
+        }   
+    }
 }

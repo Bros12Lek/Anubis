@@ -1,26 +1,8 @@
 {
-  "name": "anubis",
-  "version": "1.0.0",
-  "description": ">para depurar o código do site de forma completa, é preciso que faça algumas instalções do node que estão logo abaixo !",
-  "main": "index.js",
-  "type": "module",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/Bros12Lek/Anubis.git"
-  },
-  "author": "",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/Bros12Lek/Anubis/issues"
-  },
-  "homepage": "https://github.com/Bros12Lek/Anubis#readme",
   "dependencies": {
     "express": "^4.18.2",
-    "knex": "^2.4.2",
-    "mysql": "^2.18.1",
-    "nodemon": "^2.0.22"
+    "expresss": "^0.0.0",
+    "knex": "^2.5.0",
+    "mysql": "^2.18.1"
   }
 }
