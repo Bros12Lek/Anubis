@@ -51,3 +51,25 @@
         }   
     }
 }
+
+@keyframes shadowBanner {
+
+    from{
+        box-shadow: 0 1rem 6rem 4rem $roxo-do-site;
+    }
+
+    to{
+        box-shadow: 0 1rem 6rem 4rem #8B008B;
+
+    }
+}
+
+@mixin animaBanner{
+
+    animation-name: shadowBanner;
+    animation-duration: 2.5s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    animation-fill-mode: both;
+} 
