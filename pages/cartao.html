@@ -28,7 +28,7 @@
     <link href='https://unpkg.com/css.gg@2.0.0/icons/css/search.css' rel='stylesheet'>
     <title>Cartão</title>
 </head>
-<body>
+<body class="cartaoBody" >
     <header class="header">
         <div class="logo">
         <img src="/img/Logo.png" alt="imagem da logo">
@@ -71,12 +71,7 @@
     </header>
 
     <main>
-
-        
         <div class="cont-car">
-            
-            
-
             <div class="branco2">
                 <div class="carbranco">
                     <h1>Cartão</h1>
@@ -84,42 +79,34 @@
                 <hr>
                 <form action="enviar" method="post" class="cartao">
 
-                    <label for="numcar">Número</label>
-                    <br>
+                    <label id="nmcarLabel" for="nmcar">Número</label>
                     <input type="number" id="nmcar" name="numcar" required>
-                    <br>
 
-                    <label for="bandeira">Bandeira</label>
-                    <br>
-                    <input type="text" id="bandeira" name="bandeira" required>
-                    <br>
-                    
-                
-                    <label for="nomecartao">Nome no Cartão</label>
-                    <input type="number" id="nomecartão" name="nomecartão" required>
-                    <br>
-        
-                    <label for="cpf">CPF</label>
-                    <br>
-                    <input type="number" id="cpf" name="cpf" >
+                    <select id="bandeira">
+                        <option disabled selected>Sua bandeira</option>
+                        <option value="visa">Visa</option>
+                        <option value="mastercard">mastercard</option>
+                        <option value="hypercard">hypercard</option>
+                        <option value="elo">elo</option>
+                    </select>
+
+                    <label id="nomecartaoLabel" for="nomecartao">Nome no Cartão</label>
+                    <input type="number" id="nomecartao" name="nomecartao" required>
                     <br>
         
-                    <label for="vencimento">Vencimento</label><br>
-                    <input type="date" id="vencimento" name="vencimento" required>
-                    <br>
+                    <label id="cpfLabel" for="cpf">CPF</label>
+                    <input type="text" placeholder="Digite seu CPF" minlength="11" id="cpf" name="cpf" >
         
-                    <label for="codseguranca">Código de Segurança</label>
+                    <label id="vencimentoLabel" for="vencimento">Vencimento</label><br>
+                    <input type="text" id="vencimento" name="vencimento" minlength="4" maxlength="4" required>
+        
+                    <label id="codsegurancaLabel" for="codseguranca">Código de Segurança</label>
                     <input type="number" id="codseguranca" name="codseguranca" required>
-        
-                    <br><br>
         
                     <button type="submit" id="enviar">Enviar!</button>
                 </form>
-
             </div>
-
         </div>
-
     </main>
 
     <footer>
@@ -138,6 +125,6 @@
         </ul>
         </nav>
     </footer>
-    <script src="index.js"></script>
+    <script src="../js/index.js"></script>
 </body>
 </html>

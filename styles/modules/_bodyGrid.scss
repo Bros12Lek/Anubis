@@ -29,3 +29,26 @@ footer{
    grid-row: 3/4;
 }
 
+::-webkit-scrollbar-thumb{
+  background-color: $roxo-do-site;
+  border-radius: 5rem;
+}
+
+::-webkit-scrollbar-track{
+  background-color: black;
+}
+
+::-webkit-scrollbar{
+  background-color: black;
+  width: auto;
+}
+
+input[type=number]::-webkit-inner-spin-button { 
+  -webkit-appearance: none;
+  
+}
+input[type=number] { 
+ -moz-appearance: textfield;
+ appearance: textfield;
+
+}

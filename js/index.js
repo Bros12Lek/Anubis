@@ -1,26 +1,3 @@
-<<<<<<< HEAD
-// let card = document.querySelector('.card__produtos');
-
-// function adicionaClasse(el,cl){
-//     el.classList.add(cl)
-// }
-
-
-
-// card.addEventListener('click', (Event) =>{
-//     card.classList.add('teste')
-//     console.log(card.className);
-    
-// })
-// card.addEventListener('click', (Event) =>{
-//     Element.classList.add('.teste')
-
-
-// } )
-
-
-
-=======
 //Script da navbar responsiva
 const nav = document.querySelector(".nav");
 const btnMenu = document.querySelector(".btn-menu");
@@ -66,4 +43,20 @@ function setAria() {
 
 btnMenu.addEventListener("click", handleButtonClick);
 btnMenu.addEventListener("touchstart", handleButtonClick);
->>>>>>> 3590dadb2ac403f86f3ccc0a762a1eb385e5ab24
+
+
+//parte lógica do cartao
+const venc = document.querySelector('#vencimento');
+
+venc.addEventListener('blur',(event) =>{
+  const vencRegex = /([0-9]{2})([0-9]{2})/;
+  let vencValue = venc.value;
+  const vencTest = vencRegex.test(vencValue);
+  if(vencTest){
+    let Vencformatado = String(vencValue).replace(vencRegex, "$1/$2");
+    venc.value = Vencformatado;
+    console.log(venc.value);
+  }else{
+    throw new Error("Campo Invalido!")
+  }
+})

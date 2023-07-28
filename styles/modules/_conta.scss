@@ -1,193 +1,197 @@
 @import '../abstract/functions';
 @import '../abstract/variables';
 
-main{
-    .conta-container{
-        width: 100%;
-        height: 100%;
-        font-family: inter;
-        font-weight: 200;
-        font-size: medium;
-        display: grid;
-        grid-template-rows: auto 1fr;
 
-         //funcao para fonte
-         @include formFonte;
-         button{
-             @include botaoDefault;
-         }
-        
-
-        .sub-container{
-            display: flex;
-            justify-content: space-around;
+.contaBody{
+    height: 100vh;
+    main{
+        .conta-container{
             width: 100%;
             height: 100%;
-            gap: 5%;
-            @media only screen and (max-width: 920px){
-                gap: 1%;
-            }
-           
-            .informacoes{
+            font-family: inter;
+            font-weight: 200;
+            font-size: medium;
+            display: grid;
+            grid-template-rows: auto 1fr;
+    
+             //funcao para fonte
+             @include formFonte;
+             button{
+                 @include botaoDefault;
+             }
+            
+    
+            .sub-container{
                 display: flex;
-                flex-direction: column;
+                justify-content: space-around;
+                width: 100%;
                 height: 100%;
-                gap: 1rem;
-                
-
-                .cartoes{
-                    display: grid;
-                    grid-template-columns: auto;
-                    grid-template-rows: auto 1fr 18%;
-                    width: 30rem;
-                    height: 30%;
-                    background-color: white;
-                    @media only screen and (max-width: 920px){
-                        width: 90%;
-                    }
+                gap: 5%;
+                @media only screen and (max-width: 920px){
+                    gap: 1%;
+                }
+               
+                .informacoes{
+                    display: flex;
+                    flex-direction: column;
+                    height: 100%;
+                    gap: 1rem;
                     
-                    .tittle-card{
-                        grid-row: 1/2;
-                        display: flex;
-                        justify-self: start;
-                        margin-left: 1.5rem;
+    
+                    .cartoes{
+                        display: grid;
+                        grid-template-columns: auto;
+                        grid-template-rows: auto 1fr 18%;
+                        width: 30rem;
+                        height: 30%;
+                        background-color: white;
+                        @media only screen and (max-width: 920px){
+                            width: 90%;
+                        }
+                        
+                        .tittle-card{
+                            grid-row: 1/2;
+                            display: flex;
+                            justify-self: start;
+                            margin-left: 1.5rem;
+                        }
+    
+                        .foot-card{
+                            grid-row: 3/4;
+                            display: flex;
+                            justify-content: end;
+                            width: 95%;
+    
+                            button{   
+                                width: 8.5rem;
+                            }
+                        }
                     }
-
-                    .foot-card{
-                        grid-row: 3/4;
-                        display: flex;
-                        justify-content: end;
-                        width: 95%;
-
+    
+                    .enderecos{
+                        display: grid;
+                        grid-template-columns: auto;
+                        grid-template-rows: auto 1fr 18%;
+                        width: 30rem;
+                        height: 30%;
+                        background-color: white;
+                        @media only screen and (max-width: 920px){
+                            width: 90%;
+                        }
+    
+    
+                        .tittle-endereco{
+                            grid-row: 1/2;
+                            display: flex;
+                            justify-self: start;
+                            margin-left: 1.5rem;
+                        }
+    
                         button{   
                             width: 8.5rem;
                         }
-                    }
-                }
-
-                .enderecos{
-                    display: grid;
-                    grid-template-columns: auto;
-                    grid-template-rows: auto 1fr 18%;
-                    width: 30rem;
-                    height: 30%;
-                    background-color: white;
-                    @media only screen and (max-width: 920px){
-                        width: 90%;
-                    }
-
-
-                    .tittle-endereco{
-                        grid-row: 1/2;
-                        display: flex;
-                        justify-self: start;
-                        margin-left: 1.5rem;
-                    }
-
-                    button{   
-                        width: 8.5rem;
-                    }
-
-                    .foot-endereco{
-                        display: flex;
-                        grid-row: 3/4;
-                        width: 95%;
-                        justify-content: end;
-                    }
-                }
-
-                .senha{
-                    display: grid;
-                    grid-template-columns: auto;
-                    grid-template-rows: auto 1fr 18%;
-                    width: 30rem;
-                    height: 30%;
-                    background-color: white;
-                    @media only screen and (max-width: 920px){
-                        width: 90%;
-                    }
-
-                    .tittle-senha{
-                        grid-row: 1/2;
-                        display: flex;
-                        justify-self: start;
-                        margin-left: 1.5rem;
-                    }
-
-                    label{
-                        margin-left: 1.5rem;
-                    }
-
-                    input {
-                        height: 1.8rem;
-                        width: 50%;
-                        outline: none;
-                        font-size: 1rem;
-                        border-radius: .3125rem;
-                        padding-left: .9rem;
-                        border: 1px solid #ccc;
-                        border-bottom-width: 2px;
-                        transition: all 0.3s ease;
-                        background-color: rgba(237, 237, 237, 0.25);
-                        margin-left: 1.5rem;
-                        margin-bottom: 1rem;
-                        &:focus, &:valid {
-                          border-color: rgb(97, 66, 218);
+    
+                        .foot-endereco{
+                            display: flex;
+                            grid-row: 3/4;
+                            width: 95%;
+                            justify-content: end;
                         }
-                      }
-
-                    .content{
-                        display: flex;
-                        flex-direction: column;
-                        grid-row: 2/3;
-                        justify-content: center;
                     }
-
-                    .foot-senha{
-                        display: flex;
-                        grid-row: 3/4;
-                        width: 95%;
-                        justify-content: end;
+    
+                    .senha{
+                        display: grid;
+                        grid-template-columns: auto;
+                        grid-template-rows: auto 1fr 18%;
+                        width: 30rem;
+                        height: 30%;
+                        background-color: white;
+                        @media only screen and (max-width: 920px){
+                            width: 90%;
+                        }
+    
+                        .tittle-senha{
+                            grid-row: 1/2;
+                            display: flex;
+                            justify-self: start;
+                            margin-left: 1.5rem;
+                        }
+    
+                        label{
+                            margin-left: 1.5rem;
+                        }
+    
+                        input {
+                            height: 1.8rem;
+                            width: 50%;
+                            outline: none;
+                            font-size: 1rem;
+                            border-radius: .3125rem;
+                            padding-left: .9rem;
+                            border: 1px solid #ccc;
+                            border-bottom-width: 2px;
+                            transition: all 0.3s ease;
+                            background-color: rgba(237, 237, 237, 0.25);
+                            margin-left: 1.5rem;
+                            margin-bottom: 1rem;
+                            &:focus, &:valid {
+                              border-color: rgb(97, 66, 218);
+                            }
+                          }
+    
+                        .content{
+                            display: flex;
+                            flex-direction: column;
+                            grid-row: 2/3;
+                            justify-content: center;
+                        }
+    
+                        .foot-senha{
+                            display: flex;
+                            grid-row: 3/4;
+                            width: 95%;
+                            justify-content: end;
+                        }
                     }
                 }
-            }
-
-            .hist-shop{
-                display: grid;
-                width: 10rem;
-                height: 92%;
-                width: 60rem;
-                background-color: white;
-                grid-template-columns: auto;
-                grid-template-rows: 5% 1fr ;
-
-                @media only screen and (max-width: 1440px){
-                    width: 40%;
-                }
-
-                @media only screen and (max-width: 920px){
-                    width: 35%;
-                    height: 98%;
-                }
-
-
-                .tittle-histShop{
-                    margin-left: 1.5rem;
-                    grid-row: 1/2;
-                    align-self: center;
-                }
-                .content-hist{
-                    display: flex;
-                    flex-flow: column wrap;
-                    grid-row: 2/3;
-                    overflow-y: auto;
-                    width: 90%;
-                    margin-left: 2rem;
+    
+                .hist-shop{
+                    display: grid;
+                    width: 10rem;
+                    height: 92%;
+                    width: 60rem;
+                    background-color: white;
+                    grid-template-columns: auto;
+                    grid-template-rows: 5% 1fr ;
+    
+                    @media only screen and (max-width: 1440px){
+                        width: 40%;
+                    }
+    
                     @media only screen and (max-width: 920px){
-                        width: 80%;
+                        width: 35%;
+                        height: 98%;
+                    }
+    
+    
+                    .tittle-histShop{
+                        margin-left: 1.5rem;
+                        grid-row: 1/2;
+                        align-self: center;
+                    }
+                    .content-hist{
+                        display: flex;
+                        flex-flow: column wrap;
+                        grid-row: 2/3;
+                        overflow-y: auto;
+                        width: 90%;
+                        margin-left: 2rem;
+                        @media only screen and (max-width: 920px){
+                            width: 80%;
+                        }
                     }
                 }
-            }
-        }     
+            }     
+        }
     }
 }

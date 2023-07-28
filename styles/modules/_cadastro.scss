@@ -1,59 +1,60 @@
-main{
+.cadBody{
+  height: 100vh;
+  main{
     .tittle{
-        display: flex;
-        justify-content: center;
-        margin-bottom: 1%;
-        font-family: inter;
+      display: flex;
+      justify-content: center;
+      margin-bottom: 1%;
+      font-family: inter;
     }
-    
-  .cadastro {
-    background-color: #FFF9F9;
-    margin: 0 auto;
-    width: 90%;
-    max-width: 850px;
-    padding: 20px;
-    position: relative;
-    display: flex;
-    flex-flow: column wrap;
-    @include botaoDefault;
-    @include formFonte;
-
-    input, label {
-        display: flex;
-        margin-bottom: 10px;
-      }
       
-      input {
-        &[type="email"], &[type="password"], &[type="text"], &[type="date"] {
-          width: 100%;
-          padding: 10px;
-          border: 1px solid #ccc;
-          border-radius: 4px;
+    .cadastro {
+      background-color: #FFF9F9;
+      margin: 0 auto;
+      width: 90%;
+      max-width: 850px;
+      padding: 20px;
+      position: relative;
+      display: flex;
+      flex-flow: column wrap;
+      @include botaoDefault;
+      @include formFonte;
+  
+      input, label {
+          display: flex;
+          margin-bottom: 10px;
         }
-      }
-      
-      
-      #enviar {
-        margin-top: 20px;
-      
-        // Posicionamento absoluto no canto inferior direito 
-        position: absolute;
-        bottom: 20px;
-        right: 20px;
-      }
-      
-      @media screen and (min-width: 600px) {
-        .cadastro {
-          width: 70%;
+        
+        input {
+          &[type="email"], &[type="password"], &[type="text"], &[type="date"] {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+          }
         }
-      }
-      
-      @media screen and (min-width: 900px) {
-        .cadastro {
-          width: 50%;
+        
+        #enviar {
+          margin-top: 20px;
+        
+          // Posicionamento absoluto no canto inferior direito 
+          position: absolute;
+          bottom: 20px;
+          right: 20px;
         }
-      }
-      
+        
+        @media screen and (min-width: 600px) {
+          .cadastro {
+            width: 70%;
+          }
+        }
+        
+        @media screen and (min-width: 900px) {
+          .cadastro {
+            width: 50%;
+          }
+        }
+        
+      } 
     }
-     
-  }
+}
