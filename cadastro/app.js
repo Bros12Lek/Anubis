@@ -2,10 +2,12 @@ const { error } = require('console');
 const express = require('express');
 const app = express();
 const path = require('path');
-const mysql = require('mysql');
 const bcrypt = require('bcrypt');
+const connection = require('../database/usuario_database');
+const imagens = path.join('../imagens');
 
 app.use(express.static(__dirname + '/public'));
+app.use(express.static(__dirname + imagens));
 
 app.get('/', (req, res) => {
     res.sendFile(path.join(__dirname + '/cadastro.html'));
@@ -14,22 +16,6 @@ app.get('/', (req, res) => {
 // Configuração para permitir o uso de req.body
 app.use(express.urlencoded({ extended: false }));
 app.use(express.json());
-
-const connection = mysql.createConnection({
-    host: '127.0.0.1',
-    port: 3306, //Port padrão do mysql
-    user: 'root',
-    password: 'senacrs',
-    database: 'usuario_database'
-});
-
-connection.connect((error) => {
-    if(error){
-        console.error("Falha de conexão no cadastro!");
-    }else{
-        console.log("Conexão com o banco de dados funcionando no cadastro!");
-    }
-});
 
 
 app.post('/enviar', async (req,res) => {

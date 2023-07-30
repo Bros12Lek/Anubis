@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" href="/img/favicon.ico" type="image/x-icon">
+    
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+    href="https://fonts.googleapis.com/css2?family=Roboto:ital@1&display=swap"
+    rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com%22%3E/>
+    < link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin />
+    <link
+    href="https://fonts.googleapis.com/css2?family=Just+Me+Again+Down+Here&display=swap"
+    rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+    href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Inter:wght@400;600&display=swap"
+    rel="stylesheet"
+    />
+    <link href='https://unpkg.com/css.gg@2.0.0/icons/css/search.css' rel='stylesheet'>
+    <title>Endereço</title>
+</head>
+
+<body class="bodyEndereco">
+    <header class="header">
+        <div class="logo">
+        <img src="Logo.png" alt="imagem da logo">
+        <p>Anubis</p>
+        </div>
+        <div class="busca">
+        <input type="text" placeholder="Pesquise seu produto">
+        <button> <i class="gg-search"></i> </button>
+    </div>
+        <nav class="nav">
+        <button
+            class="btn-menu"
+            aria-label="Abrir Menu"
+            aria-haspopup="true"
+            aria-controls="menu"
+            aria-expanded="false"
+        >
+        <span class="hamburger"></span>
+        </button>
+        <ul class="menu" id="menu" role="menu">
+            <li class="nav-item-1">
+            <a class="nav-link" href="#"
+                ><img src="Conta.png" alt="icone para conta"
+            /></a>
+            </li>
+            <li class="nav-item">
+            <a class="nav-link" href="#"
+                ><img
+                src="mercadinho.png"
+                alt="icone para o carrinho de compras"
+            /></a>
+            </li>
+            <li class="nav-item">
+            <a class="nav-link" href="#">
+                <img src="Suporte.png" alt="icone do suporte"/></a>
+            </li>
+        </ul>
+        </nav>
+    </header>
+
+    <main>
+  
+        <div class="cont-end">
+            <div class="branco">
+                <div class="endebranco">
+                    <h1>Endereço</h1>
+                </div>
+                <hr>
+
+                <form action="enviar" method="post" class="cadastro">
+                    <label for="cep">CEP</label> <br>
+                    <input type="text" id="cep" name="cep" maxlength="9" required> <br>
+
+                    <label for="bairro">Bairro</label> <br>
+                    <input type="text" id="bairro" name="bairro" required><br>
+
+                    <label for="rua">Rua</label> <br>
+                    <input type="text" id="rua" name="rua" required><br>
+                
+                    <label for="numerocasa">Número</label> <br>
+                    <input type="number" id="numerocasa" name="numerocasa" required> <br>
+        
+                    <label for="complemento">Complemento</label> <br>
+                    <input type="text" id="complemento" name="complemento" ><br> <br>
+        
+                    <label for="estado">Selecione um Estado:</label>
+                    <select id="estado" onchange="carregarCidades()" name="estado">
+                        <option value="">Selecione um Estado</option>
+                        <!-- As opções de estado serão preenchidas dinamicamente através da API -->
+                    </select> <br>
+
+                    <label for="cidade">Selecione uma Cidade:</label>
+                    <select id="cidade" name="cidade">
+                        <option value="">Selecione um Estado primeiro</option>
+                        <!-- As opções de cidade serão preenchidas dinamicamente quando um estado for selecionado -->
+                    </select> <br> <br>
+        
+                    <label for="referencia">Referência</label> <br>
+                    <input type="text" id="referencia" name="referencia" > <br><br>
+        
+                    <button type="submit" id="enviar">Enviar!</button>
+                </form>
+            </div>
+        </div>
+
+    </main>
+
+    <footer>
+        <div class="logo">
+        <img src="Logo.png" alt="imagem da logo">
+        <p>Anubis</p>
+        </div>
+        
+        <nav>
+        <p>Siga-nos</p>
+        <ul>
+            <li><img src="Facebook.png" alt="icone do facebook"></li>
+            <li><img src="twitter.png" alt="icone do twitter"></li>
+            <li><img src="youtube.png"  alt="icone do youtube"></li>
+            <li><img src="insta.png"  alt="icone do insta"></li>
+        </ul>
+        </nav>
+    </footer>
+    
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="script.js"></script>
+    <script> //Depois será preciso tirar isso,e fazer funcionar em outro diretório 
+        // URL base da API do IBGE
+        const baseUrl = 'https://servicodados.ibge.gov.br/api/v1/localidades/';
+
+        // Função para carregar os estados na lista de seleção
+        function carregarEstados() {
+            const estadoSelect = document.getElementById('estado');
+            axios.get(baseUrl + 'estados')
+                .then(response => {
+                    response.data.forEach(estado => {
+                        const option = document.createElement('option');
+                        option.value = estado.id;
+                        option.textContent = estado.nome;
+                        estadoSelect.appendChild(option);
+                    });
+                })
+                .catch(error => {
+                    console.error('Erro ao carregar estados: ', error);
+                });
+        }
+
+        // Função para carregar as cidades do estado selecionado
+        function carregarCidades() {
+            const estadoSelect = document.getElementById('estado');
+            const cidadeSelect = document.getElementById('cidade');
+            const estadoId = estadoSelect.value;
+
+            // Limpa as opções de cidades
+            cidadeSelect.innerHTML = '<option value="">Carregando...</option>';
+
+            if (estadoId !== '') {
+                axios.get(baseUrl + `estados/${estadoId}/municipios`)
+                    .then(response => {
+                        cidadeSelect.innerHTML = '<option value="">Selecione uma Cidade</option>';
+                        response.data.forEach(cidade => {
+                            const option = document.createElement('option');
+                            option.value = cidade.id;
+                            option.textContent = cidade.nome;
+                            cidadeSelect.appendChild(option);
+                        });
+                    })
+                    .catch(error => {
+                        console.error('Erro ao carregar cidades: ', error);
+                    });
+            }
+        }
+
+        // Carregar os estados ao carregar a página
+        carregarEstados();
+    </script>
+</body>
+</html>

@@ -1,0 +1,25 @@
+@keyframes shadowBanner {
+
+    from{
+        box-shadow: 0 1rem 6rem 4rem $roxo-do-site;
+    }
+
+    to{
+        box-shadow: 0 1rem 6rem 4rem #8B008B;
+
+    }
+}
+
+@keyframes showTittle {
+    from{
+        opacity: 0;
+        text-align: start;
+        letter-spacing: .5rem;
+    }
+
+    to{
+        opacity: 1;
+        text-align: center;
+        letter-spacing: 0;
+    }
+}

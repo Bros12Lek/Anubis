@@ -1,12 +1,8 @@
--- MySQL dump 10.13  Distrib 8.0.31, for Win64 (x86_64)
+-- MySQL dump 10.13  Distrib 8.0.33, for Win64 (x86_64)
 --
 -- Host: localhost    Database: usuario_database
 -- ------------------------------------------------------
--- Server version	8.0.31
-
-DROP DATABASE IF EXISTS usuario_database;
-create database usuario_database;
-use usuario_database;
+-- Server version	8.0.33
 
 /*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
 /*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
@@ -18,6 +14,36 @@ use usuario_database;
 /*!40014 SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0 */;
 /*!40101 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='NO_AUTO_VALUE_ON_ZERO' */;
 /*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
+
+--
+-- Table structure for table `cartao`
+--
+
+DROP TABLE IF EXISTS `cartao`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!50503 SET character_set_client = utf8mb4 */;
+CREATE TABLE `cartao` (
+  `id_usuario` int NOT NULL,
+  `numero` int NOT NULL,
+  `bandeira` varchar(40) NOT NULL,
+  `nome_cartao` varchar(100) NOT NULL,
+  `cpf` char(14) NOT NULL,
+  `vencimento` date NOT NULL,
+  `codigo_seguranca` int NOT NULL,
+  `qnt_cartoes` int DEFAULT NULL,
+  PRIMARY KEY (`id_usuario`),
+  CONSTRAINT `cartao_ibfk_1` FOREIGN KEY (`id_usuario`) REFERENCES `usuario` (`id_usuario`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `cartao`
+--
+
+LOCK TABLES `cartao` WRITE;
+/*!40000 ALTER TABLE `cartao` DISABLE KEYS */;
+/*!40000 ALTER TABLE `cartao` ENABLE KEYS */;
+UNLOCK TABLES;
 
 --
 -- Table structure for table `endereco`
@@ -34,9 +60,11 @@ CREATE TABLE `endereco` (
   `num_casa` int NOT NULL,
   `complemento` varchar(100) DEFAULT NULL,
   `referencia` varchar(150) DEFAULT NULL,
+  `cidade` varchar(200) DEFAULT NULL,
+  `estado` varchar(200) DEFAULT NULL,
   PRIMARY KEY (`id_usuario2`),
   CONSTRAINT `endereco_ibfk_1` FOREIGN KEY (`id_usuario2`) REFERENCES `usuario` (`id_usuario`)
-) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -45,6 +73,7 @@ CREATE TABLE `endereco` (
 
 LOCK TABLES `endereco` WRITE;
 /*!40000 ALTER TABLE `endereco` DISABLE KEYS */;
+INSERT INTO `endereco` VALUES (4,'321321321','Adsdawsads','Fasdfas',131,'Asdadssda','Adsasdd','3106200','31');
 /*!40000 ALTER TABLE `endereco` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -67,7 +96,7 @@ CREATE TABLE `usuario` (
   `celular` char(14) DEFAULT NULL,
   PRIMARY KEY (`id_usuario`),
   UNIQUE KEY `cpf` (`cpf`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -76,6 +105,7 @@ CREATE TABLE `usuario` (
 
 LOCK TABLES `usuario` WRITE;
 /*!40000 ALTER TABLE `usuario` DISABLE KEYS */;
+
 /*!40000 ALTER TABLE `usuario` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -88,4 +118,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2023-07-20 14:08:41
+-- Dump completed on 2023-07-30 20:07:36

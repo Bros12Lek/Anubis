@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    
+    <link rel="stylesheet" href="cartao.css"> <!-- Mudar isso-->
+    <link rel="stylesheet" href="style.css"/>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+    href="https://fonts.googleapis.com/css2?family=Roboto:ital@1&display=swap"
+    rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com%22%3E/>
+    < link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin />
+    <link
+    href="https://fonts.googleapis.com/css2?family=Just+Me+Again+Down+Here&display=swap"
+    rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+    href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Inter:wght@400;600&display=swap"
+    rel="stylesheet"
+    />
+    <link href='https://unpkg.com/css.gg@2.0.0/icons/css/search.css' rel='stylesheet'>
+    <title>Cartão</title>
+</head>
+<body class="cartaoBody" >
+    <header class="header">
+        <div class="logo">
+        <img src="Logo.png" alt="imagem da logo">
+        <p>Anubis</p>
+        </div>
+        <div class="busca">
+        <input type="text" placeholder="Pesquise seu produto">
+        <button> <i class="gg-search"></i> </button>
+    </div>
+        <nav class="nav">
+        <button
+            class="btn-menu"
+            aria-label="Abrir Menu"
+            aria-haspopup="true"
+            aria-controls="menu"
+            aria-expanded="false"
+        >
+        <span class="hamburger"></span>
+        </button>
+        <ul class="menu" id="menu" role="menu">
+            <li class="nav-item-1">
+            <a class="nav-link" href="#"
+                ><img src="Conta.png" alt="icone para conta"
+            /></a>
+            </li>
+            <li class="nav-item">
+            <a class="nav-link" href="#"
+                ><img
+                src="mercadinho.png"
+                alt="icone para o carrinho de compras"
+            /></a>
+            </li>
+            <li class="nav-item">
+            <a class="nav-link" href="#"
+                ><img src="Suporte.png" alt="icone do suporte"
+            /></a>
+            </li>
+        </ul>
+        </nav>
+    </header>
+
+    <main>
+        <div class="cont-car">
+            <div class="branco2">
+                <div class="carbranco">
+                    <h1>Cartão</h1>
+                </div>
+                <hr>
+                <form action="enviar" method="post" class="cartao">
+
+                    <label id="nmcarLabel" for="nmcar">Número</label>
+                    <input type="number" id="nmcar" name="numcar" required>
+
+                    <select id="bandeira" name="bandeira">
+                        <option disabled selected>Sua bandeira</option>
+                        <option value="visa">Visa</option>
+                        <option value="mastercard">mastercard</option>
+                        <option value="hypercard">hypercard</option>
+                        <option value="elo">elo</option>
+                    </select>
+
+                    <label id="nomecartaoLabel" for="nomecartao">Nome no Cartão</label>
+                    <input type="text" id="nomecartao" name="nomecartao" required>
+                    <br>
+        
+                    <label id="cpfLabel" for="cpf">CPF</label>
+                    <input type="text" oninput="formatarCPF()" placeholder="XXX.XXX.XXX-XX" id="cpf" name="cpf" >
+        
+                    <label id="vencimentoLabel" for="vencimento">Vencimento</label><br>
+                    <input type="date" id="vencimento" name="vencimento" required>
+        
+                    <label id="codsegurancaLabel" for="codseguranca">Código de Segurança</label>
+                    <input type="number" id="codseguranca" name="codseguranca" required>
+        
+                    <button type="submit" id="enviar">Enviar!</button>
+                </form>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="logo">
+        <img src="Logo.png" alt="imagem da logo">
+        <p>Anubis</p>
+        </div>
+        
+        <nav>
+        <p>Siga-nos</p>
+        <ul>
+            <li><img src="Facebook.png" alt="icone do facebook"></li>
+            <li><img src="twitter.png" alt="icone do twitter"></li>
+            <li><img src="youtube.png"  alt="icone do youtube"></li>
+            <li><img src="insta.png"  alt="icone do insta"></li>
+        </ul>
+        </nav>
+    </footer>
+    <script src="./public/script.js"></script>
+</body>
+</html>

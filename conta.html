@@ -5,7 +5,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Minha Conta</title>
-    <link rel="stylesheet" href="style.css"/>
+    <link rel="stylesheet" href="styles/style.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -33,7 +33,7 @@
   <body>
     <header class="header">
       <div class="logo">
-        <img src="Logo.png" alt="imagem da logo" />
+        <img src="/imagens/Logo.png" alt="imagem da logo" />
         <p>ANUBIS</p>
       </div>
       <div class="busca">
@@ -53,19 +53,19 @@
         <ul class="menu" id="menu" role="menu">
           <li class="nav-item-1">
             <a class="nav-link" href="#"
-              ><img src="Conta.png" alt="icone para conta"
+              ><img src="/imagens/Conta.png" alt="icone para conta"
             /></a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="#"
               ><img
-                src="mercadinho.png"
+                src="/imagens/mercadinho.png"
                 alt="icone para o carrinho de compras"
             /></a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="#"
-              ><img src="Suporte.png" alt="icone do suporte"
+              ><img src="/imagens/Suporte.png" alt="icone do suporte"
             /></a>
           </li>
         </ul>
@@ -78,22 +78,22 @@
         <div class="sub-container">
           <div class="informacoes">
             <div class="cartoes">
-              <p class="tittle-card">Cartões Salvos: <span id="num_cartoes">0</span>/3 </p>
+              <p class="tittle-card">Cartões Salvos 0/3 </p>
 
               <div class="foot-card">
-                <a href="http://localhost:3000/conta/cartao">Adicionar novo cartão</a>
+                <button>Adicionar novo cartão</button>
               </div>
             </div>
             <div class="enderecos">
-              <p class="tittle-endereco">Endereços Salvos: <span id="num_enderecos">0</span>/3</p>
+              <p class="tittle-endereco">Endereços Salvos 0/3</p>
 
               <div class="foot-endereco">
-                <a href="http://localhost:3000/conta/endereco">Adicionar novo endereço</a>
+                <button>Adicionar novo endereço</button>
               </div>
             </div>
             <div class="senha">
               <p class="tittle-senha">Alterar senha</p>
-              <form action="enviar" method="post" class="content">
+              <form class="content">
                 <label for="novaSenha">Nova Senha</label>
                 <input type="password" name="novaSenha" id="novaSenha">
                 <label for="repitaSenha"> Repita a nova senha </label>
@@ -116,17 +116,17 @@
 
     <footer>
       <div class="logo">
-        <img src="Logo.png" alt="imagem da logo" />
+        <img src="/imagens/Logo.png" alt="imagem da logo" />
         <p>Anubis</p>
       </div>
 
       <nav>
         <p>Siga-nos</p>
         <ul>
-          <li><img src="Facebook.png" alt="icone do facebook" /></li>
-          <li><img src="twitter.png" alt="icone do twitter" /></li>
-          <li><img src="youtube.png" alt="icone do youtube" /></li>
-          <li><img src="insta.png" alt="icone do insta" /></li>
+          <li><img src="/imagens/Facebook.png" alt="icone do facebook" /></li>
+          <li><img src="imagens/twitter.png" alt="icone do twitter" /></li>
+          <li><img src="imagens/youtube.png" alt="icone do youtube" /></li>
+          <li><img src="imagens/insta.png" alt="icone do insta" /></li>
         </ul>
       </nav>
     </footer>
