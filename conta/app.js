@@ -8,6 +8,7 @@ const styles = path.join('../../styles');
 
 app.use(express.static(__dirname + imagens));
 app.use(express.static(__dirname + styles));
+app.use(express.static(__dirname + '/public'))
 
 app.get('/', (req, res) => {
     res.sendFile(path.join(__dirname + '/conta.html'));

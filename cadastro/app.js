@@ -4,10 +4,10 @@ const app = express();
 const path = require('path');
 const bcrypt = require('bcrypt');
 const connection = require('../database/usuario_database');
-const imagens = path.join('../imagens');
+//const imagens = path.join('../imagens');
 
 app.use(express.static(__dirname + '/public'));
-app.use(express.static(__dirname + imagens));
+//app.use(express.static(__dirname + '../imagens'));
 
 app.get('/', (req, res) => {
     res.sendFile(path.join(__dirname + '/cadastro.html'));

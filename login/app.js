@@ -4,10 +4,10 @@ const path = require('path');
 const connection = require('../database/usuario_database');
 const bcrypt = require('bcrypt');
 
-const style = path.join(__dirname, 'styles');
-const imagens = path.join(__dirname, 'imagens');
+const styles = path.join(__dirname, '../styles');
+const imagens = path.join(__dirname, '../imagens');
 
-app.use(express.static(style));
+app.use(express.static(styles));
 app.use(express.static(imagens));
 
 app.get('/', (req,res) => {

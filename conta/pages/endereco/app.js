@@ -7,15 +7,11 @@ const styles = path.join('../../../../styles');
 
 app.use(express.static(__dirname + imagens));
 app.use(express.static(__dirname + styles));
+app.use(express.static(__dirname + '/public'));
 
 app.get('/', (req, res) => {
     res.sendFile(__dirname + '/endereco.html');
 });
-
-app.get('/public/script.js', (req, res) => { //Mudar isso 
-    res.set('Content-Type', 'application/javascript');
-    app.use(express.static('public'));
-  });
 
 /*
 // Configuração para permitir o uso de req.body
