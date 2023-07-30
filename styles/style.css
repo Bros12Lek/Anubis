@@ -1433,4 +1433,72 @@ main .secMarca .d__flex-marcas .card__marcas {
 }
 .bodyEndereco .cont-end .cadastro input:focus, .bodyEndereco .cont-end .cadastro input:valid {
   border-color: rgb(97, 66, 218);
+}
+
+.bodyShopcar {
+  height: 100vh;
+  width: 100vw;
+}
+.bodyShopcar .container-shopCar {
+  width: 100%;
+  height: 100%;
+  display: grid;
+  grid-template-rows: 15% 1fr;
+}
+.bodyShopcar .container-shopCar h1 {
+  grid-row: 1/2;
+  align-self: center;
+  margin-left: 20rem;
+  font-family: inter;
+}
+@media only screen and (max-width: 1315px) {
+  .bodyShopcar .container-shopCar h1 {
+    margin-left: 2rem;
+  }
+}
+.bodyShopcar .container-shopCar .hist-container {
+  background-color: white;
+  height: 90%;
+  width: 75%;
+  justify-self: center;
+  display: grid;
+  grid-template-columns: 1fr 18%;
+}
+@media only screen and (max-width: 1315px) {
+  .bodyShopcar .container-shopCar .hist-container {
+    width: 95%;
+  }
+}
+@media only screen and (max-width: 920px) {
+  .bodyShopcar .container-shopCar .hist-container {
+    grid-template-columns: 1fr 25%;
+  }
+}
+.bodyShopcar .container-shopCar .hist-container aside {
+  display: grid;
+  grid-template-rows: 30% 30% 1fr;
+  border-left: 6px solid #898080;
+}
+.bodyShopcar .container-shopCar .hist-container aside img {
+  justify-self: center;
+}
+.bodyShopcar .container-shopCar .hist-container aside .creditcard {
+  align-self: center;
+  grid-row: 1/2;
+}
+.bodyShopcar .container-shopCar .hist-container aside .pixIcon {
+  align-self: center;
+  grid-row: 2/3;
+}
+.bodyShopcar .container-shopCar .hist-container aside button {
+  grid-row: 3/4;
+  align-self: center;
+  justify-self: center;
+  height: 3rem;
+  width: 10rem;
+}
+@media only screen and (max-width: 1300px) {
+  .bodyShopcar .container-shopCar .hist-container aside button {
+    width: 70%;
+  }
 }/*# sourceMappingURL=style.css.map */
