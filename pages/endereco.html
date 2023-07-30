@@ -70,49 +70,37 @@
     </header>
 
     <main>
-
-        
         <div class="cont-end">
-            
-            
-
-            <div class="branco">
-                <div class="endebranco">
-                    <h1>Endereço</h1>
-                </div>
-                <hr>
+                <h1>Endereço</h1>
                 <form action="enviar" method="post" class="cadastro">
 
                     <label for="cep">CEP</label>
-                    <br>
-                    <input type="number" id="cep" name="cep" required>
-                    <br>
+                    <input type="text" class="cep" name="cep" maxlength="8" required>
+                    
 
                     <label for="rua">Rua</label>
-                    <br>
-                    <input type="text" id="rua" name="rua" required>
-                    <br>
+                    
+                    <input type="text" class="rua" name="rua" required>
+                    
                     
                 
                     <label for="numerocasa">Número</label>
                     <input type="number" id="numerocasa" name="numerocasa" required>
         
                     <label for="complemento">Complemento</label>
-                    <input type="text" id="complemento" name="complemento" >
+                    <input type="text" class="complemento" name="complemento" >
         
                     <label for="cidade">Cidade</label>
-                    <input type="text" id="cidade" name="cidade" required>
+                    <input type="text" class="cidade" name="cidade" required>
         
                     <label for="estado">Estado</label>
-                    <input type="text" id="estado" name="estado" required>
+                    <input type="text" class="estado" name="estado" required>
         
                     <label for="referencia">Referência</label>
-                    <input type="text" id="referencia" name="referencia" > <br><br>
+                    <input type="text" id="referencia" name="referencia" > 
         
                     <button type="submit" id="enviar">Enviar!</button>
                 </form>
-
-            </div>
 
         </div>
 
@@ -134,6 +122,7 @@
         </ul>
         </nav>
     </footer>
-    <script src="index.js"></script>
+    <script src="../js/index.js"></script>
+    <script src="../js/endereco.js"></script>
 </body>
 </html>

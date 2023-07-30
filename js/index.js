@@ -43,20 +43,3 @@ function setAria() {
 
 btnMenu.addEventListener("click", handleButtonClick);
 btnMenu.addEventListener("touchstart", handleButtonClick);
-
-
-//parte lógica do cartao
-const venc = document.querySelector('#vencimento');
-
-venc.addEventListener('blur',(event) =>{
-  const vencRegex = /([0-9]{2})([0-9]{2})/;
-  let vencValue = venc.value;
-  const vencTest = vencRegex.test(vencValue);
-  if(vencTest){
-    let Vencformatado = String(vencValue).replace(vencRegex, "$1/$2");
-    venc.value = Vencformatado;
-    console.log(venc.value);
-  }else{
-    throw new Error("Campo Invalido!")
-  }
-})

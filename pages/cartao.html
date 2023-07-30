@@ -86,7 +86,7 @@
                         <option disabled selected>Sua bandeira</option>
                         <option value="visa">Visa</option>
                         <option value="mastercard">mastercard</option>
-                        <option value="hypercard">hypercard</option>
+                        <option value="hipercard">hipercard</option>
                         <option value="elo">elo</option>
                     </select>
 
@@ -95,7 +95,7 @@
                     <br>
         
                     <label id="cpfLabel" for="cpf">CPF</label>
-                    <input type="text" placeholder="Digite seu CPF" minlength="11" id="cpf" name="cpf" >
+                    <input type="text" placeholder="Digite seu CPF" maxlength="11" id="cpf" name="cpf" >
         
                     <label id="vencimentoLabel" for="vencimento">Vencimento</label><br>
                     <input type="text" id="vencimento" name="vencimento" minlength="4" maxlength="4" required>
@@ -126,5 +126,6 @@
         </nav>
     </footer>
     <script src="../js/index.js"></script>
+    <script src="../js/card.js"></script>
 </body>
 </html>

@@ -5,6 +5,5 @@
 ```
 npm install express
 npm install  mysql
-npm install knex
 npm install nodemon (opcional)
 ```

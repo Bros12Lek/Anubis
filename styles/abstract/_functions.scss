@@ -1,4 +1,5 @@
 @import './variables';
+@import './animations';
 
 @mixin logoFonte{
     font-family: 'Just Me Again Down Here', cursive;
@@ -52,18 +53,6 @@
     }
 }
 
-@keyframes shadowBanner {
-
-    from{
-        box-shadow: 0 1rem 6rem 4rem $roxo-do-site;
-    }
-
-    to{
-        box-shadow: 0 1rem 6rem 4rem #8B008B;
-
-    }
-}
-
 @mixin animaBanner{
 
     animation-name: shadowBanner;
@@ -73,3 +62,11 @@
     animation-direction: alternate;
     animation-fill-mode: both;
 } 
+
+@mixin tittleAnimation ($duracao){
+    animation-name: showTittle;
+    animation-duration: $duracao;
+    animation-direction: normal;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+}

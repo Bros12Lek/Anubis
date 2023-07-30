@@ -1,0 +1,55 @@
+.bodyEndereco{
+    height: 100vh;
+
+    .cont-end {
+
+    
+        @include formFonte;
+        height: 100%;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        h1{
+            @include tittleAnimation(2s);
+        }
+
+        .endereco {
+          padding: 20px 0px;
+          width: 100%;
+        }
+        
+        .cadastro{
+            display: flex;
+            flex-direction: column;
+            width: 30%;
+            align-items: center;
+
+            label{
+                width: 70%;
+                text-align: start;
+            }
+
+            input {
+               height: 2.1875rem;
+               width: 70%;
+               outline: none;
+               font-size: 1rem;
+               border-radius: .3125rem;
+               padding-left: .9rem;
+               border: 1px solid #ccc;
+               border-bottom-width: 2px;
+               transition: all 0.3s ease;
+               background-color: rgba(237, 237, 237, 0.25);
+               margin-bottom: 1rem; 
+               &:focus, &:valid {
+                 border-color: rgb(97, 66, 218);
+               }
+             }
+        }
+  
+    }
+
+}

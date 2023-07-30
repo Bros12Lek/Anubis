@@ -226,6 +226,18 @@ input[type=number] {
     box-shadow: 0 1rem 6rem 4rem #8B008B;
   }
 }
+@keyframes showTittle {
+  from {
+    opacity: 0;
+    text-align: start;
+    letter-spacing: 0.5rem;
+  }
+  to {
+    opacity: 1;
+    text-align: center;
+    letter-spacing: 0;
+  }
+}
 footer {
   background-color: #452E9F;
   display: flex;
@@ -312,12 +324,36 @@ footer nav ul li img {
     box-shadow: 0 1rem 6rem 4rem #8B008B;
   }
 }
+@keyframes showTittle {
+  from {
+    opacity: 0;
+    text-align: start;
+    letter-spacing: 0.5rem;
+  }
+  to {
+    opacity: 1;
+    text-align: center;
+    letter-spacing: 0;
+  }
+}
 @keyframes shadowBanner {
   from {
     box-shadow: 0 1rem 6rem 4rem #452E9F;
   }
   to {
     box-shadow: 0 1rem 6rem 4rem #8B008B;
+  }
+}
+@keyframes showTittle {
+  from {
+    opacity: 0;
+    text-align: start;
+    letter-spacing: 0.5rem;
+  }
+  to {
+    opacity: 1;
+    text-align: center;
+    letter-spacing: 0;
   }
 }
 .bodyLogin {
@@ -427,6 +463,18 @@ main .container-1 .login-container form input:focus, main .container-1 .login-co
   }
   to {
     box-shadow: 0 1rem 6rem 4rem #8B008B;
+  }
+}
+@keyframes showTittle {
+  from {
+    opacity: 0;
+    text-align: start;
+    letter-spacing: 0.5rem;
+  }
+  to {
+    opacity: 1;
+    text-align: center;
+    letter-spacing: 0;
   }
 }
 .contaBody {
@@ -1333,4 +1381,56 @@ main .secMarca .d__flex-marcas .card__marcas {
   grid-row: 6/7;
   grid-column: 1/3;
   justify-self: center;
+}
+
+.bodyEndereco {
+  height: 100vh;
+}
+.bodyEndereco .cont-end {
+  font-family: inter;
+  font-weight: 200;
+  font-size: medium;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.bodyEndereco .cont-end h1 {
+  animation-name: showTittle;
+  animation-duration: 2s;
+  animation-direction: normal;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+}
+.bodyEndereco .cont-end .endereco {
+  padding: 20px 0px;
+  width: 100%;
+}
+.bodyEndereco .cont-end .cadastro {
+  display: flex;
+  flex-direction: column;
+  width: 30%;
+  align-items: center;
+}
+.bodyEndereco .cont-end .cadastro label {
+  width: 70%;
+  text-align: start;
+}
+.bodyEndereco .cont-end .cadastro input {
+  height: 2.1875rem;
+  width: 70%;
+  outline: none;
+  font-size: 1rem;
+  border-radius: 0.3125rem;
+  padding-left: 0.9rem;
+  border: 1px solid #ccc;
+  border-bottom-width: 2px;
+  transition: all 0.3s ease;
+  background-color: rgba(237, 237, 237, 0.25);
+  margin-bottom: 1rem;
+}
+.bodyEndereco .cont-end .cadastro input:focus, .bodyEndereco .cont-end .cadastro input:valid {
+  border-color: rgb(97, 66, 218);
 }/*# sourceMappingURL=style.css.map */
