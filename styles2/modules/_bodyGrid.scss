@@ -1,0 +1,31 @@
+@import '../abstract/variables';
+
+body{
+    height: 100vh;
+    width: 100vw;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto 1fr auto;
+    background: rgb(255,255,255);
+    background: linear-gradient(180deg, rgba(255,255,255,1) 0%, rgba(233,232,238,1) 25%, rgba(233,232,238,1) 50%, rgba(97,66,218,0.48783263305322133) 100%);
+    background-repeat: no-repeat;
+    background-size: contain;
+    img{
+        width: 50px;
+        height: 50px;
+    }
+}
+
+header{
+  grid-column: 1/4;
+}
+
+main{
+   grid-column: 1/4;
+   grid-row: 2/3;
+}
+footer{
+  grid-column: 1/2;
+   grid-row: 3/4;
+}
+

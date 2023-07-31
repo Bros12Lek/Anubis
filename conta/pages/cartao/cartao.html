@@ -29,47 +29,48 @@
     <title>Cartão</title>
 </head>
 <body class="cartaoBody" >
-    <header class="header">
-        <div class="logo">
-        <img src="Logo.png" alt="imagem da logo">
-        <p>Anubis</p>
-        </div>
-        <div class="busca">
-        <input type="text" placeholder="Pesquise seu produto">
-        <button> <i class="gg-search"></i> </button>
+  <header class="headerIndex">
+    <div class="logo">
+      <a class="nav-link" href="http://localhost:3000/homepage/">
+        <img src="Logo.png" alt="imagem da logo" />
+      </a>
+      <p>ANUBIS</p>
     </div>
-        <nav class="nav">
-        <button
-            class="btn-menu"
-            aria-label="Abrir Menu"
-            aria-haspopup="true"
-            aria-controls="menu"
-            aria-expanded="false"
-        >
+    <div class="busca">
+      <input type="text" placeholder="pesquise seu produto" />
+      <button><i class="gg-search"></i></button>
+    </div>
+    <nav class="nav">
+      <button
+        class="btn-menu"
+        aria-label="Abrir Menu"
+        aria-haspopup="true"
+        aria-controls="menu"
+        aria-expanded="false"
+      >
         <span class="hamburger"></span>
-        </button>
-        <ul class="menu" id="menu" role="menu">
-            <li class="nav-item-1">
-            <a class="nav-link" href="#"
-                ><img src="Conta.png" alt="icone para conta"
-            /></a>
-            </li>
-            <li class="nav-item">
-            <a class="nav-link" href="#"
-                ><img
-                src="mercadinho.png"
-                alt="icone para o carrinho de compras"
-            /></a>
-            </li>
-            <li class="nav-item">
-            <a class="nav-link" href="#"
-                ><img src="Suporte.png" alt="icone do suporte"
-            /></a>
-            </li>
-        </ul>
-        </nav>
-    </header>
-
+      </button>
+      <ul class="menu" id="menu" role="menu">
+        <li class="nav-item-1">
+          <a class="nav-link" href="http://localhost:3000/conta/"
+            ><img src="Conta.png" alt="icone para conta"
+          /></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="http://localhost:3000/carrinho/"
+            ><img
+              src="mercadinho.png"
+              alt="icone para o carrinho de compras"
+          /></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#"
+          ><img src="favoritos.png" alt="icone para aba dos favoritos"
+        /></a>
+        </li>
+      </ul>
+    </nav>
+  </header>
     <main>
         <div class="cont-car">
             <div class="branco2">
@@ -91,14 +92,14 @@
                     </select>
 
                     <label id="nomecartaoLabel" for="nomecartao">Nome no Cartão</label>
-                    <input type="number" id="nomecartao" name="nomecartao" required>
+                    <input type="text" id="nomecartao" name="nomecartao" required>
                     <br>
         
                     <label id="cpfLabel" for="cpf">CPF</label>
                     <input type="text" oninput="formatarCPF()" placeholder="XXX.XXX.XXX-XX" id="cpf" name="cpf" >
         
                     <label id="vencimentoLabel" for="vencimento">Vencimento</label><br>
-                    <input type="text" id="vencimento" name="vencimento" minlength="4" maxlength="4" required>
+                    <input type="date" id="vencimento" name="vencimento" minlength="4" maxlength="4" required>
         
                     <label id="codsegurancaLabel" for="codseguranca">Código de Segurança</label>
                     <input type="number" id="codseguranca" name="codseguranca" required>

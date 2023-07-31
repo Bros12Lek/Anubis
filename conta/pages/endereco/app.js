@@ -3,7 +3,7 @@ const app = express();
 const path = require('path');
 const connection = require('../../../database/usuario_database');
 const imagens = path.join('../../../../imagens');
-const styles = path.join('../../../../styles');
+const styles = path.join('../../../../styles2');
 
 app.use(express.static(__dirname + imagens));
 app.use(express.static(__dirname + styles));

@@ -13,8 +13,8 @@ header {
   height: 4.6875rem;
 }
 header ul img {
-  width: 25px;
-  height: 25px;
+  width: 2.5rem;
+  height: 2.5rem;
 }
 header .logo {
   justify-content: center;
@@ -167,8 +167,6 @@ header .btn-menu {
 }
 
 body {
-  height: 100vh;
-  width: 100vw;
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-template-rows: auto 1fr auto;
@@ -192,12 +190,55 @@ main {
 }
 
 footer {
-  grid-column: 1/2;
+  grid-column: 1/4;
   grid-row: 3/4;
 }
 
+::-webkit-scrollbar-thumb {
+  background-color: #452E9F;
+  border-radius: 5rem;
+}
+
+::-webkit-scrollbar-track {
+  background-color: black;
+}
+
+::-webkit-scrollbar {
+  background-color: black;
+  width: auto;
+}
+
+input[type=number]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+}
+
+input[type=number] {
+  -moz-appearance: textfield;
+  -webkit-appearance: textfield;
+          appearance: textfield;
+}
+
+@keyframes shadowBanner {
+  from {
+    box-shadow: 0 1rem 6rem 4rem #452E9F;
+  }
+  to {
+    box-shadow: 0 1rem 6rem 4rem #8B008B;
+  }
+}
+@keyframes showTittle {
+  from {
+    opacity: 0;
+    text-align: start;
+    letter-spacing: 0.5rem;
+  }
+  to {
+    opacity: 1;
+    text-align: center;
+    letter-spacing: 0;
+  }
+}
 footer {
-  width: 100vw;
   background-color: #452E9F;
   display: flex;
   justify-content: space-around;
@@ -275,6 +316,50 @@ footer nav ul li img {
   cursor: pointer;
 }
 
+@keyframes shadowBanner {
+  from {
+    box-shadow: 0 1rem 6rem 4rem #452E9F;
+  }
+  to {
+    box-shadow: 0 1rem 6rem 4rem #8B008B;
+  }
+}
+@keyframes showTittle {
+  from {
+    opacity: 0;
+    text-align: start;
+    letter-spacing: 0.5rem;
+  }
+  to {
+    opacity: 1;
+    text-align: center;
+    letter-spacing: 0;
+  }
+}
+@keyframes shadowBanner {
+  from {
+    box-shadow: 0 1rem 6rem 4rem #452E9F;
+  }
+  to {
+    box-shadow: 0 1rem 6rem 4rem #8B008B;
+  }
+}
+@keyframes showTittle {
+  from {
+    opacity: 0;
+    text-align: start;
+    letter-spacing: 0.5rem;
+  }
+  to {
+    opacity: 1;
+    text-align: center;
+    letter-spacing: 0;
+  }
+}
+.bodyLogin {
+  height: 100vh;
+}
+
 main .pLogin {
   font-weight: 800;
   font-size: x-large;
@@ -340,9 +425,9 @@ main .container-1 .login-container form {
   justify-content: space-evenly;
   align-items: center;
 }
-main .container-1 .login-container form button button {
-  width: 6.25rem;
-  height: 2.1875rem;
+main .container-1 .login-container form button {
+  width: 100px;
+  height: 35px;
   border-radius: 5px;
   border: 1px;
   font-family: inter;
@@ -372,17 +457,44 @@ main .container-1 .login-container form input:focus, main .container-1 .login-co
   border-color: rgb(97, 66, 218);
 }
 
-main .conta-container {
+@keyframes shadowBanner {
+  from {
+    box-shadow: 0 1rem 6rem 4rem #452E9F;
+  }
+  to {
+    box-shadow: 0 1rem 6rem 4rem #8B008B;
+  }
+}
+@keyframes showTittle {
+  from {
+    opacity: 0;
+    text-align: start;
+    letter-spacing: 0.5rem;
+  }
+  to {
+    opacity: 1;
+    text-align: center;
+    letter-spacing: 0;
+  }
+}
+.contaBody {
+  height: 100vh;
+}
+.contaBody main .conta-container {
   width: 100%;
   height: 100%;
-  border: 2px solid;
+  font-family: inter;
+  font-weight: 200;
+  font-size: medium;
+  display: grid;
+  grid-template-rows: auto 1fr;
   font-family: inter;
   font-weight: 200;
   font-size: medium;
 }
-main .conta-container button {
-  width: 6.25rem;
-  height: 2.1875rem;
+.contaBody main .conta-container button {
+  width: 100px;
+  height: 35px;
   border-radius: 5px;
   border: 1px;
   font-family: inter;
@@ -391,20 +503,25 @@ main .conta-container button {
   color: white;
   cursor: pointer;
 }
-main .conta-container .sub-container {
+.contaBody main .conta-container .sub-container {
   display: flex;
   justify-content: space-around;
   width: 100%;
   height: 100%;
   gap: 5%;
 }
-main .conta-container .sub-container .informacoes {
+@media only screen and (max-width: 920px) {
+  .contaBody main .conta-container .sub-container {
+    gap: 1%;
+  }
+}
+.contaBody main .conta-container .sub-container .informacoes {
   display: flex;
   flex-direction: column;
   height: 100%;
   gap: 1rem;
 }
-main .conta-container .sub-container .informacoes .cartoes {
+.contaBody main .conta-container .sub-container .informacoes .cartoes {
   display: grid;
   grid-template-columns: auto;
   grid-template-rows: auto 1fr 18%;
@@ -412,22 +529,27 @@ main .conta-container .sub-container .informacoes .cartoes {
   height: 30%;
   background-color: white;
 }
-main .conta-container .sub-container .informacoes .cartoes .tittle-card {
+@media only screen and (max-width: 920px) {
+  .contaBody main .conta-container .sub-container .informacoes .cartoes {
+    width: 90%;
+  }
+}
+.contaBody main .conta-container .sub-container .informacoes .cartoes .tittle-card {
   grid-row: 1/2;
   display: flex;
   justify-self: start;
   margin-left: 1.5rem;
 }
-main .conta-container .sub-container .informacoes .cartoes .foot-card {
+.contaBody main .conta-container .sub-container .informacoes .cartoes .foot-card {
   grid-row: 3/4;
   display: flex;
   justify-content: end;
   width: 95%;
 }
-main .conta-container .sub-container .informacoes .cartoes .foot-card button {
+.contaBody main .conta-container .sub-container .informacoes .cartoes .foot-card button {
   width: 8.5rem;
 }
-main .conta-container .sub-container .informacoes .enderecos {
+.contaBody main .conta-container .sub-container .informacoes .enderecos {
   display: grid;
   grid-template-columns: auto;
   grid-template-rows: auto 1fr 18%;
@@ -435,22 +557,27 @@ main .conta-container .sub-container .informacoes .enderecos {
   height: 30%;
   background-color: white;
 }
-main .conta-container .sub-container .informacoes .enderecos .tittle-endereco {
+@media only screen and (max-width: 920px) {
+  .contaBody main .conta-container .sub-container .informacoes .enderecos {
+    width: 90%;
+  }
+}
+.contaBody main .conta-container .sub-container .informacoes .enderecos .tittle-endereco {
   grid-row: 1/2;
   display: flex;
   justify-self: start;
   margin-left: 1.5rem;
 }
-main .conta-container .sub-container .informacoes .enderecos button {
+.contaBody main .conta-container .sub-container .informacoes .enderecos button {
   width: 8.5rem;
 }
-main .conta-container .sub-container .informacoes .enderecos .foot-endereco {
+.contaBody main .conta-container .sub-container .informacoes .enderecos .foot-endereco {
   display: flex;
   grid-row: 3/4;
   width: 95%;
   justify-content: end;
 }
-main .conta-container .sub-container .informacoes .senha {
+.contaBody main .conta-container .sub-container .informacoes .senha {
   display: grid;
   grid-template-columns: auto;
   grid-template-rows: auto 1fr 18%;
@@ -458,16 +585,21 @@ main .conta-container .sub-container .informacoes .senha {
   height: 30%;
   background-color: white;
 }
-main .conta-container .sub-container .informacoes .senha .tittle-senha {
+@media only screen and (max-width: 920px) {
+  .contaBody main .conta-container .sub-container .informacoes .senha {
+    width: 90%;
+  }
+}
+.contaBody main .conta-container .sub-container .informacoes .senha .tittle-senha {
   grid-row: 1/2;
   display: flex;
   justify-self: start;
   margin-left: 1.5rem;
 }
-main .conta-container .sub-container .informacoes .senha label {
+.contaBody main .conta-container .sub-container .informacoes .senha label {
   margin-left: 1.5rem;
 }
-main .conta-container .sub-container .informacoes .senha input {
+.contaBody main .conta-container .sub-container .informacoes .senha input {
   height: 1.8rem;
   width: 50%;
   outline: none;
@@ -481,22 +613,22 @@ main .conta-container .sub-container .informacoes .senha input {
   margin-left: 1.5rem;
   margin-bottom: 1rem;
 }
-main .conta-container .sub-container .informacoes .senha input:focus, main .conta-container .sub-container .informacoes .senha input:valid {
+.contaBody main .conta-container .sub-container .informacoes .senha input:focus, .contaBody main .conta-container .sub-container .informacoes .senha input:valid {
   border-color: rgb(97, 66, 218);
 }
-main .conta-container .sub-container .informacoes .senha .content {
+.contaBody main .conta-container .sub-container .informacoes .senha .content {
   display: flex;
   flex-direction: column;
   grid-row: 2/3;
   justify-content: center;
 }
-main .conta-container .sub-container .informacoes .senha .foot-senha {
+.contaBody main .conta-container .sub-container .informacoes .senha .foot-senha {
   display: flex;
   grid-row: 3/4;
   width: 95%;
   justify-content: end;
 }
-main .conta-container .sub-container .hist-shop {
+.contaBody main .conta-container .sub-container .hist-shop {
   display: grid;
   width: 10rem;
   height: 92%;
@@ -505,16 +637,868 @@ main .conta-container .sub-container .hist-shop {
   grid-template-columns: auto;
   grid-template-rows: 5% 1fr;
 }
-main .conta-container .sub-container .hist-shop .tittle-histShop {
+@media only screen and (max-width: 1440px) {
+  .contaBody main .conta-container .sub-container .hist-shop {
+    width: 40%;
+  }
+}
+@media only screen and (max-width: 920px) {
+  .contaBody main .conta-container .sub-container .hist-shop {
+    width: 35%;
+    height: 98%;
+  }
+}
+.contaBody main .conta-container .sub-container .hist-shop .tittle-histShop {
   margin-left: 1.5rem;
   grid-row: 1/2;
   align-self: center;
 }
-main .conta-container .sub-container .hist-shop .content-hist {
+.contaBody main .conta-container .sub-container .hist-shop .content-hist {
   display: flex;
   flex-flow: column wrap;
   grid-row: 2/3;
   overflow-y: auto;
   width: 90%;
   margin-left: 2rem;
+}
+@media only screen and (max-width: 920px) {
+  .contaBody main .conta-container .sub-container .hist-shop .content-hist {
+    width: 80%;
+  }
+}
+
+.cadBody {
+  height: 100vh;
+}
+.cadBody main .tittle {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 1%;
+  font-family: inter;
+}
+.cadBody main .cadastro {
+  background-color: #FFF9F9;
+  margin: 0 auto;
+  width: 90%;
+  max-width: 850px;
+  padding: 20px;
+  position: relative;
+  display: flex;
+  flex-flow: column wrap;
+  width: 100px;
+  height: 35px;
+  border-radius: 5px;
+  border: 1px;
+  font-family: inter;
+  background-color: #452E9F;
+  font-weight: 400;
+  color: white;
+  cursor: pointer;
+  font-family: inter;
+  font-weight: 200;
+  font-size: medium;
+}
+.cadBody main .cadastro input, .cadBody main .cadastro label {
+  display: flex;
+  margin-bottom: 10px;
+}
+.cadBody main .cadastro input[type=email], .cadBody main .cadastro input[type=password], .cadBody main .cadastro input[type=text], .cadBody main .cadastro input[type=date] {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+.cadBody main .cadastro #enviar {
+  margin-top: 20px;
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+}
+@media screen and (min-width: 600px) {
+  .cadBody main .cadastro .cadastro {
+    width: 70%;
+  }
+}
+@media screen and (min-width: 900px) {
+  .cadBody main .cadastro .cadastro {
+    width: 50%;
+  }
+}
+
+.headerIndex {
+  height: 7rem;
+}
+
+main .banner {
+  width: 100%;
+  height: 28rem;
+  margin-top: 4rem;
+  margin-bottom: 8rem;
+  box-shadow: 0 1rem 6rem 4rem #452E9F;
+}
+@media only screen and (max-width: 600px) {
+  main .banner {
+    height: 10%;
+  }
+}
+@media only screen and (max-width: 375px) {
+  main .banner {
+    height: 4%;
+  }
+}
+main .promocaoBanner {
+  cursor: pointer;
+  width: 80%;
+  height: 20%;
+  margin-bottom: 12%;
+  box-shadow: 0 1rem 6rem 4rem #452E9F;
+  margin-left: 10%;
+  border-radius: 2rem;
+}
+@media only screen and (min-width: 1024px) {
+  main .promocaoBanner:hover {
+    animation-name: shadowBanner;
+    animation-duration: 2.5s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    animation-fill-mode: both;
+  }
+}
+@media only screen and (max-width: 768px) {
+  main .promocaoBanner {
+    height: 10%;
+  }
+}
+@media only screen and (max-width: 425px) {
+  main .promocaoBanner {
+    margin-left: 5%;
+    width: 90%;
+    height: 5%;
+  }
+}
+@media only screen and (max-width: 375px) {
+  main .promocaoBanner {
+    height: 3%;
+    margin-bottom: 30%;
+  }
+}
+main button {
+  width: 100px;
+  height: 35px;
+  border-radius: 5px;
+  border: 1px;
+  font-family: inter;
+  background-color: #452E9F;
+  font-weight: 400;
+  color: white;
+  cursor: pointer;
+}
+main .d__flex-mostruario {
+  display: flex;
+  justify-content: center;
+  margin-top: 5%;
+  flex-wrap: wrap;
+}
+main .d__flex-mostruario .card {
+  margin: 0 20px 0 20px;
+  cursor: pointer;
+}
+main .d__flex-mostruario .card .card__img {
+  background-color: white;
+  height: 7rem;
+  width: 7rem;
+  display: block;
+  margin: 0 auto;
+  border-radius: 10px;
+  border: thin solid black;
+  display: flex;
+  align-items: center;
+  transition-duration: 0.8s;
+  transition-property: all;
+}
+@media only screen and (min-width: 1024px) {
+  main .d__flex-mostruario .card .card__img:hover {
+    background-color: #452E9F;
+    opacity: 0.8;
+  }
+}
+main .d__flex-mostruario .card .card__img img {
+  margin: auto;
+  width: 70%;
+  height: 60%;
+}
+main .d__flex-mostruario .card .card__text {
+  text-align: center;
+}
+main .promo__add-placas {
+  display: flex;
+  justify-content: center;
+  margin-top: 2%;
+  margin-bottom: 8rem;
+}
+main .promo__add-placas img {
+  width: 65%;
+  height: 5rem;
+}
+@media only screen and (max-width: 700px) {
+  main .promo__add-placas img {
+    width: 100%;
+  }
+}
+main .produtos {
+  display: grid;
+  grid-template-rows: 10% 1fr;
+  text-align: center;
+  margin-bottom: 20rem;
+  width: 65%;
+  margin-left: auto;
+  margin-right: auto;
+}
+@media only screen and (max-width: 1024px) {
+  main .produtos {
+    width: 100%;
+  }
+}
+main .produtos h4 {
+  text-align: start;
+}
+@media only screen and (max-width: 399px) {
+  main .produtos h4 {
+    text-align: center;
+  }
+}
+main .produtos .d__flex-produtos {
+  gap: 5rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+main .produtos .d__flex-produtos p {
+  font-size: large;
+  font-weight: 600;
+}
+main .produtos .d__flex-produtos .card__produtos {
+  background-color: white;
+  height: 12.5rem;
+  width: 15rem;
+  border-radius: 10px;
+  overflow: hidden;
+  border: thin solid #898080;
+  transition: 0.5s ease-in-out;
+}
+main .produtos .d__flex-produtos .card__produtos:hover {
+  height: 25rem;
+}
+@media only screen and (max-width: 1024px) {
+  main .produtos .d__flex-produtos .card__produtos {
+    margin-left: 1rem;
+    width: 11rem;
+  }
+}
+@media only screen and (max-width: 768px) {
+  main .produtos .d__flex-produtos .card__produtos {
+    width: 9rem;
+  }
+}
+main .produtos .d__flex-preco {
+  display: flex;
+  justify-content: center;
+}
+main .produtos .card__text-produtosOverflow {
+  margin-top: 65px;
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: space-around;
+  height: 10rem;
+  align-items: center;
+}
+main .produtos .card__img-produtos img {
+  height: 90px;
+  width: 14vh;
+}
+main .produtos .card__text-produtos {
+  margin-top: 6%;
+}
+main .secMarca {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 10rem;
+  gap: 3rem;
+}
+main .secMarca h4 {
+  margin-left: 20rem;
+}
+@media only screen and (min-width: 2560px) {
+  main .secMarca h4 {
+    margin-left: 32rem;
+  }
+}
+@media only screen and (max-width: 1440px) {
+  main .secMarca h4 {
+    margin-left: 8rem;
+  }
+}
+@media only screen and (max-width: 768px) {
+  main .secMarca h4 {
+    margin-left: 6rem;
+  }
+}
+@media only screen and (max-width: 425px) {
+  main .secMarca h4 {
+    margin-left: 2.5rem;
+  }
+}
+@media only screen and (max-width: 325px) {
+  main .secMarca h4 {
+    align-self: center;
+  }
+}
+main .secMarca .d__flex-marcas {
+  display: flex;
+  justify-content: center;
+  gap: 5rem;
+}
+main .secMarca .d__flex-marcas .card__marcas {
+  background-color: white;
+  height: 14vh;
+  width: 13vh;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+  width: 15vh;
+}
+@media (min-width: 280px) and (max-width: 320px) {
+  main .secMarca .d__flex-mostruario {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  main .secMarca .card {
+    font-size: 10px;
+    margin: 0 11px 0 0;
+  }
+  main .secMarca .card__img {
+    height: 20px;
+    width: 40px;
+    margin: 0 auto;
+  }
+  main .secMarca .card__img img {
+    height: 19px;
+  }
+  main .secMarca .continuacao img {
+    height: 13px;
+  }
+  main .secMarca .promo__add-placas img {
+    height: 35px;
+  }
+  main .secMarca .card__produtos {
+    width: 18vh;
+    height: 25vh;
+  }
+  main .secMarca .card__produtos input {
+    font-size: 10px;
+    margin-top: 1px;
+  }
+  main .secMarca .card__img-produtos img {
+    height: 11vh;
+    width: 16vh;
+  }
+  main .secMarca .card__text-produtos {
+    font-size: 10px;
+  }
+  main .secMarca .card__text-produtosOverflow {
+    margin-top: 55px;
+  }
+  main .secMarca .d__flex-marcas {
+    flex-wrap: wrap;
+  }
+  main .secMarca .card__marcas {
+    margin: 10px 0 0 10px;
+    height: 10vh;
+    width: 10vh;
+  }
+  main .secMarca .card__marcas img {
+    height: 5.5vh;
+    justify-content: center;
+    width: 8.5vh;
+  }
+}
+@media (min-width: 320px) and (max-width: 480px) {
+  main .secMarca .d__flex-mostruario {
+    flex-wrap: wrap;
+  }
+  main .secMarca .card {
+    font-size: 14px;
+    margin: 0 10px 0 0;
+  }
+  main .secMarca .card__img {
+    height: 35px;
+    width: 55px;
+    margin: 0 auto;
+  }
+  main .secMarca .card__img img {
+    height: 29px;
+  }
+  main .secMarca .continuacao img {
+    height: 13px;
+    margin-top: 10px;
+    margin-right: 5px;
+  }
+  main .secMarca .promo__add-placas img {
+    height: 35px;
+  }
+  main .secMarca .card__produtos {
+    width: 21vh;
+    height: 25vh;
+  }
+  main .secMarca .card__img-produtos img {
+    height: 14vh;
+    width: 18vh;
+  }
+  main .secMarca .card__produtos input {
+    font-size: 13px;
+    margin-top: 2px;
+  }
+  main .secMarca .card__text-produtos {
+    font-size: 11px;
+  }
+  main .secMarca .card__text-produtosOverflow {
+    margin-top: 30px;
+  }
+  main .secMarca .d__flex-marcas {
+    flex-wrap: wrap;
+  }
+  main .secMarca .card__marcas {
+    margin: 10px 0 10px 10px;
+    height: 10vh;
+    width: 15vh;
+  }
+  main .secMarca .card__marcas img {
+    height: 7.5vh;
+    justify-content: center;
+    width: 9vh;
+  }
+}
+@media (min-width: 481px) and (max-width: 768px) {
+  main .secMarca .d__flex-mostruario {
+    flex-wrap: wrap;
+  }
+  main .secMarca .card {
+    font-size: 14px;
+    margin: 0 10px 0 0;
+  }
+  main .secMarca .card__img {
+    height: 35px;
+    width: 45px;
+    margin: 0 auto;
+  }
+  main .secMarca .card__img img {
+    height: 25px;
+  }
+  main .secMarca .continuacao img {
+    height: 15px;
+    margin-top: 15px;
+    margin-right: 10px;
+  }
+  main .secMarca .card__produtos {
+    width: 24vh;
+    height: 30vh;
+  }
+  main .secMarca .card__img-produtos img {
+    height: 18vh;
+    width: 18vh;
+  }
+  main .secMarca .card__produtos input {
+    font-size: 13px;
+    margin-top: 3px;
+  }
+  main .secMarca .card__text-produtos {
+    font-size: 11px;
+  }
+  main .secMarca .card__text-produtosOverflow {
+    margin-top: 45px;
+  }
+  main .secMarca .d__flex-marcas {
+    flex-wrap: wrap;
+  }
+  main .secMarca .card__marcas {
+    margin: 10px 0 10px 10px;
+    height: 10vh;
+    width: 15vh;
+  }
+  main .secMarca .card__marcas img {
+    height: 7.5vh;
+    justify-content: center;
+    width: 9vh;
+  }
+}
+@media (min-width: 769px) and (max-width: 1024px) {
+  main .secMarca .d__flex-mostruario {
+    flex-wrap: wrap;
+  }
+  main .secMarca .card {
+    font-size: 14px;
+    margin: 0 10px 0 0;
+  }
+  main .secMarca .card__img {
+    height: 35px;
+    width: 55px;
+    margin: 0 auto;
+  }
+  main .secMarca .card__img img {
+    height: 29px;
+  }
+  main .secMarca .continuacao img {
+    height: 15px;
+    margin-top: 15px;
+    margin-right: 10px;
+  }
+  main .secMarca .card__produtos {
+    width: 25vh;
+    height: 34vh;
+  }
+  main .secMarca .card__img-produtos img {
+    height: 16vh;
+    width: 18vh;
+  }
+  main .secMarca .card__produtos input {
+    font-size: 13px;
+    margin-top: 3px;
+  }
+  main .secMarca .card__text-produtos {
+    font-size: 18px;
+  }
+  main .secMarca .card__text-produtosOverflow {
+    margin-top: 60px;
+  }
+  main .secMarca .d__flex-marcas {
+    flex-wrap: wrap;
+  }
+  main .secMarca .card__marcas {
+    margin: 10px 0 10px 10px;
+    height: 10vh;
+    width: 15vh;
+  }
+  main .secMarca .card__marcas img {
+    height: 7.5vh;
+    justify-content: center;
+    width: 9vh;
+  }
+}
+@media (min-width: 1025px) and (max-width: 1200px) {
+  main .secMarca .d__flex-mostruario {
+    flex-wrap: wrap;
+  }
+  main .secMarca .card {
+    font-size: 18px;
+    margin: 0 10px 0 0;
+  }
+  main .secMarca .card__img {
+    height: 55px;
+    width: 55px;
+    margin: 0 auto;
+  }
+  main .secMarca .card__img img {
+    height: 6.5vh;
+  }
+  main .secMarca .continuacao img {
+    height: 25px;
+    margin-top: 20px;
+    margin-right: 15px;
+  }
+  main .secMarca .card__produtos {
+    width: 35vh;
+    height: 30vh;
+  }
+  main .secMarca .card__img-produtos img {
+    height: 14vh;
+    width: 18vh;
+  }
+  main .secMarca .card__produtos input {
+    font-size: 16px;
+    margin-top: 3px;
+  }
+  main .secMarca .card__text-produtos {
+    font-size: 18px;
+  }
+  main .secMarca .card__text-produtosOverflow {
+    margin-top: 45px;
+  }
+  main .secMarca .d__flex-marcas {
+    flex-wrap: wrap;
+  }
+  main .secMarca .card__marcas {
+    margin: 10px 0 10px 10px;
+    height: 10vh;
+    width: 15vh;
+  }
+  main .secMarca .card__marcas img {
+    height: 8.5vh;
+    justify-content: center;
+    width: 10vh;
+  }
+}
+
+.cartaoBody {
+  height: 100vh;
+}
+.cartaoBody .cont-car {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.cartaoBody .cont-car .carbranco {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.cartaoBody .cont-car .branco2 {
+  width: 25%;
+  height: 50%;
+  background-color: #FFF9F9;
+  border: 1px solid #898080;
+  border-radius: 5px;
+}
+@media only screen and (max-width: 1440px) {
+  .cartaoBody .cont-car .branco2 {
+    width: 40%;
+  }
+}
+@media only screen and (max-width: 1024px) {
+  .cartaoBody .cont-car .branco2 {
+    width: 50%;
+  }
+}
+@media only screen and (max-width: 768px) {
+  .cartaoBody .cont-car .branco2 {
+    width: 65%;
+  }
+}
+@media only screen and (max-width: 425px) {
+  .cartaoBody .cont-car .branco2 {
+    width: 95%;
+  }
+}
+.cartaoBody .cont-car .branco2 .cartao {
+  display: grid;
+  gap: 0.3rem;
+  grid-template-columns: 1fr auto;
+  grid-template-rows: repeat(4, 30%);
+}
+.cartaoBody .cont-car .branco2 .cartao input {
+  height: 1.7rem;
+  width: 75%;
+  outline: none;
+  font-size: 1rem;
+  border-radius: 0.3125rem;
+  padding-left: 0.9rem;
+  border: 1px solid #ccc;
+  border-bottom-width: 2px;
+  transition: all 0.3s ease;
+  background-color: rgba(237, 237, 237, 0.25);
+}
+.cartaoBody .cont-car .branco2 .cartao input:focus, .cartaoBody .cont-car .branco2 .cartao input:valid {
+  border-color: rgb(97, 66, 218);
+}
+.cartaoBody .cont-car .branco2 .cartao select {
+  width: 75%;
+  height: 70%;
+  outline: none;
+  border-radius: 0.3125rem;
+  padding-left: 0.9rem;
+  border: 1px solid #ccc;
+  border-bottom-width: 2px;
+  background-color: rgba(237, 237, 237, 0.25);
+}
+.cartaoBody .cont-car .branco2 .cartao select:focus, .cartaoBody .cont-car .branco2 .cartao select:valid {
+  border-color: rgb(97, 66, 218);
+}
+.cartaoBody .cont-car .branco2 .cartao #nmcarLabel {
+  grid-column: 1/2;
+  grid-row: 1/2;
+  margin-left: 2rem;
+}
+.cartaoBody .cont-car .branco2 .cartao #nmcar {
+  grid-column: 1/2;
+  grid-row: 1/2;
+  justify-self: center;
+  align-self: center;
+}
+.cartaoBody .cont-car .branco2 .cartao #bandeira {
+  grid-column: 2/3;
+  grid-row: 1/2;
+  align-self: center;
+}
+.cartaoBody .cont-car .branco2 .cartao #nomecartaoLabel {
+  grid-column: 1/3;
+  grid-row: 2/3;
+  margin-left: 3.8rem;
+}
+.cartaoBody .cont-car .branco2 .cartao #nomecartao {
+  grid-column: 1/3;
+  grid-row: 2/3;
+  justify-self: center;
+  align-self: center;
+}
+.cartaoBody .cont-car .branco2 .cartao #cpfLabel {
+  margin-left: 3.8rem;
+  grid-column: 1/3;
+  grid-row: 3/4;
+}
+.cartaoBody .cont-car .branco2 .cartao #cpf {
+  justify-self: center;
+  align-self: center;
+  grid-column: 1/3;
+  grid-row: 3/4;
+}
+.cartaoBody .cont-car .branco2 .cartao #vencimentoLabel {
+  margin-left: 2rem;
+  grid-column: 1/2;
+  grid-row: 4/5;
+}
+.cartaoBody .cont-car .branco2 .cartao #vencimento {
+  justify-self: center;
+  align-self: center;
+  grid-column: 1/2;
+  grid-row: 4/5;
+}
+.cartaoBody .cont-car .branco2 .cartao #codsegurancaLabel {
+  grid-column: 2/3;
+  grid-row: 5/4;
+  margin-left: 1.6rem;
+}
+.cartaoBody .cont-car .branco2 .cartao #codseguranca {
+  justify-self: center;
+  align-self: center;
+  grid-column: 2/3;
+  grid-row: 5/4;
+}
+.cartaoBody .cont-car .branco2 .cartao button {
+  grid-row: 6/7;
+  grid-column: 1/3;
+  justify-self: center;
+}
+
+.bodyEndereco {
+  height: 100vh;
+}
+.bodyEndereco .cont-end {
+  font-family: inter;
+  font-weight: 200;
+  font-size: medium;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.bodyEndereco .cont-end h1 {
+  animation-name: showTittle;
+  animation-duration: 2s;
+  animation-direction: normal;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+}
+.bodyEndereco .cont-end .endereco {
+  padding: 20px 0px;
+  width: 100%;
+}
+.bodyEndereco .cont-end .cadastro {
+  display: flex;
+  flex-direction: column;
+  width: 30%;
+  align-items: center;
+}
+.bodyEndereco .cont-end .cadastro label {
+  width: 70%;
+  text-align: start;
+}
+.bodyEndereco .cont-end .cadastro input {
+  height: 2.1875rem;
+  width: 70%;
+  outline: none;
+  font-size: 1rem;
+  border-radius: 0.3125rem;
+  padding-left: 0.9rem;
+  border: 1px solid #ccc;
+  border-bottom-width: 2px;
+  transition: all 0.3s ease;
+  background-color: rgba(237, 237, 237, 0.25);
+  margin-bottom: 1rem;
+}
+.bodyEndereco .cont-end .cadastro input:focus, .bodyEndereco .cont-end .cadastro input:valid {
+  border-color: rgb(97, 66, 218);
+}
+
+.bodyShopcar {
+  height: 100vh;
+  width: 100vw;
+}
+.bodyShopcar .container-shopCar {
+  width: 100%;
+  height: 100%;
+  display: grid;
+  grid-template-rows: 15% 1fr;
+}
+.bodyShopcar .container-shopCar h1 {
+  grid-row: 1/2;
+  align-self: center;
+  margin-left: 20rem;
+  font-family: inter;
+}
+@media only screen and (max-width: 1315px) {
+  .bodyShopcar .container-shopCar h1 {
+    margin-left: 2rem;
+  }
+}
+.bodyShopcar .container-shopCar .hist-container {
+  background-color: white;
+  height: 90%;
+  width: 75%;
+  justify-self: center;
+  display: grid;
+  grid-template-columns: 1fr 18%;
+}
+@media only screen and (max-width: 1315px) {
+  .bodyShopcar .container-shopCar .hist-container {
+    width: 95%;
+  }
+}
+@media only screen and (max-width: 920px) {
+  .bodyShopcar .container-shopCar .hist-container {
+    grid-template-columns: 1fr 25%;
+  }
+}
+.bodyShopcar .container-shopCar .hist-container aside {
+  display: grid;
+  grid-template-rows: 30% 30% 1fr;
+  border-left: 6px solid #898080;
+}
+.bodyShopcar .container-shopCar .hist-container aside img {
+  justify-self: center;
+}
+.bodyShopcar .container-shopCar .hist-container aside .creditcard {
+  align-self: center;
+  grid-row: 1/2;
+}
+.bodyShopcar .container-shopCar .hist-container aside .pixIcon {
+  align-self: center;
+  grid-row: 2/3;
+}
+.bodyShopcar .container-shopCar .hist-container aside button {
+  grid-row: 3/4;
+  align-self: center;
+  justify-self: center;
+  height: 3rem;
+  width: 10rem;
+}
+@media only screen and (max-width: 1300px) {
+  .bodyShopcar .container-shopCar .hist-container aside button {
+    width: 70%;
+  }
 }/*# sourceMappingURL=style.css.map */

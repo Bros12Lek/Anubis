@@ -1,8 +1,9 @@
 @import '../abstract/variables';
 @import '../abstract/functions';
 
-
-  
+.bodyLogin{
+  height: 100vh;
+}
 
 main{
   .pLogin{
@@ -56,11 +57,9 @@ main{
         margin-top: .9rem;
       }
       form{
-  
         button{
           @include botaoDefault;
         }
-  
         label{
           display: flex;
           justify-content: start;
@@ -92,7 +91,6 @@ main{
             border-color: rgb(97, 66, 218);
           }
         }
-  
       }
     }  
   }

@@ -113,8 +113,6 @@ main{
                 text-align: center;
             }
         }   
-
-       
     
         .d__flex-produtos{
             // flex da div produtos, trabalhando a responsividade da seção inteira 
@@ -269,13 +267,13 @@ main{
             }
             .d__flex-marcas{
                 flex-wrap: wrap;
-                
             }
             .card__marcas{
                 
                 margin: 10px 0 0 10px;
                 height: 10vh;
                 width: 10vh
+            
             }
             .card__marcas img{
                 height: 5.5vh;
