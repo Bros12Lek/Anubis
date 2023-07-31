@@ -29,14 +29,14 @@ app.post('/enviar', async (req, res) => {
         const hashedPassword = await bcrypt.hash(senha, 10);
 
         const query = 'UPDATE usuario SET senha = ? WHERE id_usuario = ?';
-        const values = [hashedPassword, 5];
+        const values = [hashedPassword, 1];
 
         connection.query(query, values, (error, results) => {
             if (error) {
                 console.error("Erro ao salvar os dados:", error);
                 res.status(500).send("Erro ao salvar os dados!");
             } else {
-                res.redirect('http://localhost:3000/conta');
+                res.redirect('http://localhost:3000/login');
             }
         });
     }

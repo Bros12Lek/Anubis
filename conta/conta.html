@@ -78,19 +78,20 @@
         <div class="sub-container">
           <div class="informacoes">
             <div class="cartoes">
-              <p class="tittle-card">Cartões Salvos: <span id="num_cartoes">0</span>/3 </p>
-
+              <p class="tittle-card">Cartões Salvos: <span id="num_cartoes">0</span>/3</p>
               <div class="foot-card">
                 <a href="http://localhost:3000/conta/cartao">Adicionar novo cartão</a>
               </div>
+              <div id="cartoesTable"></div> <!-- Placeholder for the Cartões salvos table -->
             </div>
+            
             <div class="enderecos">
               <p class="tittle-endereco">Endereços Salvos: <span id="num_enderecos">0</span>/3</p>
-
               <div class="foot-endereco">
                 <a href="http://localhost:3000/conta/endereco">Adicionar novo endereço</a>
               </div>
-            </div>
+              <div id="enderecosTable"></div> <!-- Placeholder for the Endereços salvos table -->
+            </div>            
             <div class="senha">
               <p class="tittle-senha">Alterar senha</p>
               <form action="enviar" method="post" class="content">

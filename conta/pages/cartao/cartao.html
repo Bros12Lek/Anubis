@@ -82,23 +82,23 @@
                     <label id="nmcarLabel" for="nmcar">Número</label>
                     <input type="number" id="nmcar" name="numcar" required>
 
-                    <select id="bandeira" name="bandeira">
+                    <select id="bandeira">
                         <option disabled selected>Sua bandeira</option>
                         <option value="visa">Visa</option>
                         <option value="mastercard">mastercard</option>
-                        <option value="hypercard">hypercard</option>
+                        <option value="hipercard">hipercard</option>
                         <option value="elo">elo</option>
                     </select>
 
                     <label id="nomecartaoLabel" for="nomecartao">Nome no Cartão</label>
-                    <input type="text" id="nomecartao" name="nomecartao" required>
+                    <input type="number" id="nomecartao" name="nomecartao" required>
                     <br>
         
                     <label id="cpfLabel" for="cpf">CPF</label>
                     <input type="text" oninput="formatarCPF()" placeholder="XXX.XXX.XXX-XX" id="cpf" name="cpf" >
         
                     <label id="vencimentoLabel" for="vencimento">Vencimento</label><br>
-                    <input type="date" id="vencimento" name="vencimento" required>
+                    <input type="text" id="vencimento" name="vencimento" minlength="4" maxlength="4" required>
         
                     <label id="codsegurancaLabel" for="codseguranca">Código de Segurança</label>
                     <input type="number" id="codseguranca" name="codseguranca" required>

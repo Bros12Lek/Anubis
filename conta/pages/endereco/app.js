@@ -13,12 +13,6 @@ app.get('/', (req, res) => {
     res.sendFile(__dirname + '/endereco.html');
 });
 
-/*
-// Configuração para permitir o uso de req.body
-app.use(express.urlencoded({ extended: false }));
-app.use(express.json())
-*/
-
 app.post('/enviar', (req, res) => {
     function capitalizeWords(str) {
         return str.toLowerCase().replace(/(^|\s)\S/g, (match) => match.toUpperCase());
@@ -39,7 +33,7 @@ app.post('/enviar', (req, res) => {
     }
 
     const query = 'INSERT INTO endereco(id_usuario2, cep, bairro, rua, num_casa, complemento, cidade, estado, referencia) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)';
-    const values = [5,cep, bairro, rua, num, complemento,cidade,estado,referencia]; //5 é um número teste
+    const values = [1,cep, bairro, rua, num, complemento,cidade,estado,referencia]; //1 é um número teste
 
     connection.query(query, values, (error, results) => {
         if (error) {

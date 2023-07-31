@@ -73,7 +73,6 @@ CREATE TABLE `endereco` (
 
 LOCK TABLES `endereco` WRITE;
 /*!40000 ALTER TABLE `endereco` DISABLE KEYS */;
-INSERT INTO `endereco` VALUES (4,'321321321','Adsdawsads','Fasdfas',131,'Asdadssda','Adsasdd','3106200','31');
 /*!40000 ALTER TABLE `endereco` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -96,7 +95,7 @@ CREATE TABLE `usuario` (
   `celular` char(14) DEFAULT NULL,
   PRIMARY KEY (`id_usuario`),
   UNIQUE KEY `cpf` (`cpf`)
-) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -105,7 +104,6 @@ CREATE TABLE `usuario` (
 
 LOCK TABLES `usuario` WRITE;
 /*!40000 ALTER TABLE `usuario` DISABLE KEYS */;
-
 /*!40000 ALTER TABLE `usuario` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -118,4 +116,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2023-07-30 20:07:36
+-- Dump completed on 2023-07-31  1:40:22

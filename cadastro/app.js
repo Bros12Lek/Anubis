@@ -26,7 +26,6 @@ app.post('/enviar', async (req,res) => {
     function capitalizeWords(str) {
         return str.toLowerCase().replace(/(^|\s)\S/g, (match) => match.toUpperCase());
     }
-
     let nome = capitalizeWords(req.body.nome); 
     let sobrenome = capitalizeWords(req.body.sobrenome);
     let data_nascimento = req.body.data_nascimento;

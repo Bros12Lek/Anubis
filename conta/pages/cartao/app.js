@@ -13,12 +13,6 @@ app.get('/', (req, res) => {
     res.sendFile(__dirname + '/cartao.html')
 });
 
-/*
-// Configuração para permitir o uso de req.body
-app.use(express.urlencoded({ extended: false }));
-app.use(express.json());
-*/
-
 app.post('/enviar', (req, res) => {
     let num_cartao = req.body.numcar;
     let bandeira = req.body.bandeira;
@@ -33,7 +27,7 @@ app.post('/enviar', (req, res) => {
     }
 
     const query = 'INSERT INTO cartao (id_usuario, numero, bandeira, nome_cartao, cpf, vencimento, codigo_seguranca) VALUES (?, ?, ?, ?, ?, ?, ?);';
-    const values = [5, num_cartao, bandeira, nome_cartao, cpf, vencimento, codigo_seguranca]; //5 é um número teste
+    const values = [1, num_cartao, bandeira, nome_cartao, cpf, vencimento, codigo_seguranca]; //1 é um número teste
 
     connection.query(query, values, (error, results) => {
         if (error) {
